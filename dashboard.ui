@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1500</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,3">
+     <item>
+      <widget class="QListWidget" name="listWidget">
+       <property name="font">
+        <font>
+         <family>Calibri</family>
+         <pointsize>28</pointsize>
+         <italic>false</italic>
+         <underline>false</underline>
+         <fontweight>Light</fontweight>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LayoutDirection::LeftToRight</enum>
+       </property>
+       <property name="flow">
+        <enum>QListView::Flow::TopToBottom</enum>
+       </property>
+       <property name="currentRow">
+        <number>-1</number>
+       </property>
+       <property name="sortingEnabled">
+        <bool>false</bool>
+       </property>
+       <item>
+        <property name="text">
+         <string>Home</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Reports</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Statistics</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QStackedWidget" name="mainStackWig">
+       <property name="font">
+        <font>
+         <fontweight>DemiBold</fontweight>
+        </font>
+       </property>
+       <property name="currentIndex">
+        <number>3</number>
+       </property>
+       <widget class="QWidget" name="pageHome">
+        <widget class="QLabel" name="label">
+         <property name="geometry">
+          <rect>
+           <x>270</x>
+           <y>240</y>
+           <width>401</width>
+           <height>221</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>HOME</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="pageReport">
+        <widget class="QLabel" name="label_3">
+         <property name="geometry">
+          <rect>
+           <x>830</x>
+           <y>360</y>
+           <width>401</width>
+           <height>221</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>report</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="statistic">
+        <widget class="QWidget" name="gridLayoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>1111</width>
+           <height>681</height>
+          </rect>
+         </property>
+         <layout class="QGridLayout" name="progressGrid"/>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="widget"/>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>listWidget</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>listWidget</sender>
+   <signal>currentRowChanged(int)</signal>
+   <receiver>mainStackWig</receiver>
+   <slot>setCurrentIndex(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>212</x>
+     <y>188</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1295</x>
+     <y>221</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
