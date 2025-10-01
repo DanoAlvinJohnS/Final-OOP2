@@ -8,8 +8,8 @@ from PyQt6.QtCore import (
     QRandomGenerator, pyqtSignal, pyqtProperty, QParallelAnimationGroup
 )
 from PyQt6.QtGui import QFont, QBrush, QColor
-from dashboard_gui import DashboardWidget
-
+from dashboard_gui import login_window, DashboardWidget
+from PyQt6 import uic
 
 # ---------- Animated Text Item ----------
 class AnimatedTextItem(QGraphicsTextItem):
@@ -282,7 +282,6 @@ class PlayfulSplash(QWidget):
             rot_anim.start()
 
 
-# ---------- Main Window ----------
 class CareerExplorer(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -290,30 +289,38 @@ class CareerExplorer(QMainWindow):
         self.resize(1500, 700)
         self.setWindowFlags(Qt.WindowType.FramelessWindowHint)
 
-        # --- Tabs ---
-        self.tabs = QTabWidget()
-  
-
-        # --- Container ---
         self.container = QWidget(self)
         self.container_layout = QVBoxLayout(self.container)
         self.container_layout.setContentsMargins(0, 0, 0, 0)
-        self.container.setStyleSheet("background-color: #0d1b2a;")
+        self.container.setStyleSheet("background-color: white;")
 
-        self.dashboard = DashboardWidget(self)
-        self.container_layout.addWidget(self.dashboard)
+        self.login_widget = login_window(self)
+        self.container_layout.addWidget(self.login_widget)
+        self.login_widget.login_btn.clicked.connect(self.login)
 
         self.wrapper = QWidget(self)
         self.wrapper_layout = QVBoxLayout(self.wrapper)
         self.wrapper_layout.setContentsMargins(0, 0, 0, 0)
         self.wrapper_layout.addWidget(self.container)
 
-        self.container.hide()  # hidden until splash finishes
+        self.container.hide()
         self.setCentralWidget(self.wrapper)
 
-        # --- Splash ---
         self.overlay = PlayfulSplash(self)
         self.overlay.show()
-       
 
- 
+    def login(self):
+        username = self.login_widget.login_input.text()
+        password = self.login_widget.password_input.text()
+
+        if username == "admin" and password == "password":
+            print("Login successful!")
+            self.container_layout.removeWidget(self.login_widget)
+            self.login_widget.deleteLater()
+
+            self.dashboard_widget = DashboardWidget(self)
+            self.container_layout.addWidget(self.dashboard_widget)
+            self.dashboard_widget.show()
+        else:
+            print("Invalid credentials. Please try again.")
+
