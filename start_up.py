@@ -68,7 +68,7 @@ class PlayfulSplash(QWidget):
         self.view.setScene(self.scene)
 
         # Background
-        self.bg_color = QColor("#0d1b2a")
+        self.bg_color = QColor("#ffffff")
         self.scene.setBackgroundBrush(QBrush(self.bg_color))
         self.view = QGraphicsView(self)
         self.view.setGeometry(self.rect())

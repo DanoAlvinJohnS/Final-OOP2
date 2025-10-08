@@ -46,7 +46,7 @@ class FancyCircularProgress(QWidget):
         if v <= 20:  return QColor(255, 77, 77)   # red
         if v <= 50:  return QColor(255, 200, 0)   # yellow
         if v <= 80:  return QColor(0, 200, 83)    # green
-        return QColor(63, 114, 255)               # blue
+        return QColor()               # blue
 
     # ----- Painting -----
     def paintEvent(self, ev):
