@@ -33,6 +33,7 @@ QPushButton:pressed {
 	font: 14px;
 	background-color: white;
     border-style: inset;
+	
 }
 verticalLayout{
 	background-color:white;
@@ -45,32 +46,14 @@ QLineEdit{
 	border-radius: 20px;	
 	padding: 5px 20px;
 	font: 20pt &quot;Arial&quot;;
+	color: black;
 }</string>
   </property>
-  <widget class="QLabel" name="background_label">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
-   <property name="geometry">
-    <rect>
-     <x>-10</x>
-     <y>0</y>
-     <width>1500</width>
-     <height>761</height>
-    </rect>
-   </property>
-   <property name="contextMenuPolicy">
-    <enum>Qt::ContextMenuPolicy::NoContextMenu</enum>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
   <widget class="QWidget" name="verticalLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>400</x>
-     <y>320</y>
+     <x>390</x>
+     <y>310</y>
      <width>691</width>
      <height>148</height>
     </rect>
@@ -88,6 +71,9 @@ QLineEdit{
         <italic>false</italic>
         <bold>false</bold>
        </font>
+      </property>
+      <property name="text">
+       <string/>
       </property>
       <property name="placeholderText">
        <string>Username</string>

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1500</width>
-    <height>700</height>
+    <width>1495</width>
+    <height>702</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,7 +15,7 @@
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout">
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,3">
+    <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,4">
      <item>
       <widget class="QListWidget" name="listWidget">
        <property name="font">
@@ -23,12 +23,16 @@
          <family>Calibri</family>
          <pointsize>28</pointsize>
          <italic>false</italic>
+         <bold>false</bold>
          <underline>false</underline>
-         <fontweight>Light</fontweight>
         </font>
        </property>
        <property name="layoutDirection">
         <enum>Qt::LayoutDirection::LeftToRight</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: qconicalgradient(cx:0, cy:0.994318, angle:132.9, stop:0.611111 rgba(16, 0, 66, 255), stop:1 rgba(91, 48, 255, 255));
+font: 28pt &quot;Calibri&quot;;</string>
        </property>
        <property name="flow">
         <enum>QListView::Flow::TopToBottom</enum>
@@ -63,21 +67,73 @@
          <fontweight>DemiBold</fontweight>
         </font>
        </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel:user_name { background-color: transparent; }</string>
+       </property>
        <property name="currentIndex">
-        <number>3</number>
+        <number>0</number>
        </property>
        <widget class="QWidget" name="pageHome">
-        <widget class="QLabel" name="label">
+        <property name="styleSheet">
+         <string notr="true">background-color: white;
+QLabel {
+
+	background-color: rgb(255, 255, 255);
+}</string>
+        </property>
+        <widget class="QLabel" name="background1_2">
          <property name="geometry">
           <rect>
-           <x>270</x>
-           <y>240</y>
-           <width>401</width>
-           <height>221</height>
+           <x>-10</x>
+           <y>0</y>
+           <width>1191</width>
+           <height>131</height>
           </rect>
          </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: qconicalgradient(cx:0, cy:0.994318, angle:93.6, stop:0.4 rgba(36, 0, 143, 188), stop:1 rgba(147, 161, 255, 255));
+background-color: qconicalgradient(cx:0, cy:0.994318, angle:96.5, stop:0.4 rgba(36, 0, 143, 255), stop:1 rgba(147, 161, 255, 255));</string>
+         </property>
          <property name="text">
-          <string>HOME</string>
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="user_name">
+         <property name="geometry">
+          <rect>
+           <x>1050</x>
+           <y>50</y>
+           <width>101</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: transparent;</string>
+         </property>
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="id_log">
+         <property name="geometry">
+          <rect>
+           <x>1050</x>
+           <y>70</y>
+           <width>101</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: transparent;</string>
+         </property>
+         <property name="text">
+          <string>TextLabel</string>
          </property>
         </widget>
        </widget>
@@ -109,7 +165,11 @@
          <layout class="QGridLayout" name="progressGrid"/>
         </widget>
        </widget>
-       <widget class="QWidget" name="widget"/>
+       <widget class="QWidget" name="widget">
+        <property name="styleSheet">
+         <string notr="true">background-color: white;</string>
+        </property>
+       </widget>
       </widget>
      </item>
     </layout>
@@ -119,7 +179,9 @@
  <tabstops>
   <tabstop>listWidget</tabstop>
  </tabstops>
- <resources/>
+ <resources>
+  <include location="sources/user_icon.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>listWidget</sender>
