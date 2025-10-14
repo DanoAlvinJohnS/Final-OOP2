@@ -180,7 +180,7 @@ background-color: qconicalgradient(cx:0, cy:0.994318, angle:96.5, stop:0.4 rgba(
   <tabstop>listWidget</tabstop>
  </tabstops>
  <resources>
-  <include location="sources/user_icon.qrc"/>
+  <include location="../sources/user_icon.qrc"/>
  </resources>
  <connections>
   <connection>

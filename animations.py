@@ -43,10 +43,28 @@ class FancyCircularProgress(QWidget):
 
     # ----- Colors -----
     def progress_color(self, v: float) -> QColor:
-        if v <= 20:  return QColor(255, 77, 77)   # red
-        if v <= 50:  return QColor(255, 200, 0)   # yellow
-        if v <= 80:  return QColor(0, 200, 83)    # green
-        return QColor()               # blue
+        # Define key colors
+        red = QColor(255, 77, 77)
+        yellow = QColor(255, 200, 0)
+        green = QColor(0, 200, 83)
+        blue = QColor(33, 150, 243)
+
+        # Linear interpolation helper
+        def lerp(c1, c2, t):
+            r = c1.red() + (c2.red() - c1.red()) * t
+            g = c1.green() + (c2.green() - c1.green()) * t
+            b = c1.blue() + (c2.blue() - c1.blue()) * t
+            return QColor(int(r), int(g), int(b))
+
+        if v <= 20:
+            return lerp(red, yellow, v / 20.0)
+        elif v <= 50:
+            return lerp(yellow, green, (v - 20) / 30.0)
+        elif v <= 80:
+            return lerp(green, blue, (v - 50) / 30.0)
+        else:
+            return blue
+
 
     # ----- Painting -----
     def paintEvent(self, ev):
