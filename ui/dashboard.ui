@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1495</width>
+    <width>1503</width>
     <height>702</height>
    </rect>
   </property>
@@ -15,7 +15,7 @@
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout">
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,4">
+    <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,5">
      <item>
       <widget class="QListWidget" name="listWidget">
        <property name="font">
@@ -31,7 +31,11 @@
         <enum>Qt::LayoutDirection::LeftToRight</enum>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color: qconicalgradient(cx:0, cy:0.994318, angle:132.9, stop:0.611111 rgba(16, 0, 66, 255), stop:1 rgba(91, 48, 255, 255));
+        <string notr="true">border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;
+border-top-right-radius: 0px;
+border-bottom-right-radius: 0px;
+background-color: qconicalgradient(cx:0, cy:0.994318, angle:132.9, stop:0.611111 rgba(16, 0, 66, 255), stop:1 rgba(91, 48, 255, 255));
 font: 28pt &quot;Calibri&quot;;</string>
        </property>
        <property name="flow">
@@ -45,17 +49,17 @@ font: 28pt &quot;Calibri&quot;;</string>
        </property>
        <item>
         <property name="text">
-         <string>Home</string>
+         <string> Home</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>Reports</string>
+         <string> Reports</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>Statistics</string>
+         <string> Statistics</string>
         </property>
        </item>
       </widget>
@@ -68,17 +72,16 @@ font: 28pt &quot;Calibri&quot;;</string>
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">QLabel:user_name { background-color: transparent; }</string>
+        <string notr="true">QLabel:user_name { background-color: transparent; }
+</string>
        </property>
        <property name="currentIndex">
         <number>0</number>
        </property>
        <widget class="QWidget" name="pageHome">
         <property name="styleSheet">
-         <string notr="true">background-color: white;
-QLabel {
-
-	background-color: rgb(255, 255, 255);
+         <string notr="true">QWidget {
+    background-color: white;
 }</string>
         </property>
         <widget class="QLabel" name="background1_2">
@@ -86,7 +89,7 @@ QLabel {
           <rect>
            <x>-10</x>
            <y>0</y>
-           <width>1191</width>
+           <width>1241</width>
            <height>131</height>
           </rect>
          </property>
@@ -101,7 +104,7 @@ background-color: qconicalgradient(cx:0, cy:0.994318, angle:96.5, stop:0.4 rgba(
         <widget class="QLabel" name="user_name">
          <property name="geometry">
           <rect>
-           <x>1050</x>
+           <x>1090</x>
            <y>50</y>
            <width>101</width>
            <height>20</height>
@@ -120,21 +123,109 @@ background-color: qconicalgradient(cx:0, cy:0.994318, angle:96.5, stop:0.4 rgba(
           <string>TextLabel</string>
          </property>
         </widget>
-        <widget class="QLabel" name="id_log">
+        <widget class="QLabel" name="Register_Label_3">
          <property name="geometry">
           <rect>
-           <x>1050</x>
+           <x>10</x>
+           <y>10</y>
+           <width>751</width>
+           <height>111</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Century Gothic</family>
+           <pointsize>72</pointsize>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: transparent;
+
+color: qconicalgradient(cx:1, cy:0.04, angle:272, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(255, 255, 255, 255));</string>
+         </property>
+         <property name="text">
+          <string>Career Explorer</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="log_out">
+         <property name="geometry">
+          <rect>
+           <x>1080</x>
            <y>70</y>
-           <width>101</width>
-           <height>20</height>
+           <width>91</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+           <pointsize>9</pointsize>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:transparent;
+font: 9pt &quot;Segoe UI&quot;;
+border-color: transparent;</string>
+         </property>
+         <property name="text">
+          <string>Log out</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>500</y>
+           <width>91</width>
+           <height>21</height>
           </rect>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: transparent;</string>
+          <string notr="true">border-top-left-radius: 10px;
+font: 12pt &quot;Segoe UI&quot;;
+border-bottom-left-radius: 0px;
+border-top-right-radius: 10px;
+border-bottom-right-radius: 0px;
+background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(140, 144, 255, 255), stop:1 rgba(151, 203, 255, 255));</string>
          </property>
          <property name="text">
-          <string>TextLabel</string>
+          <string>    Recents</string>
          </property>
+        </widget>
+        <widget class="QWidget" name="widget_2" native="true">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>520</y>
+           <width>1211</width>
+           <height>151</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-top-left-radius: 30px;
+border-bottom-left-radius: 30px;
+border-top-right-radius: 30px;
+border-bottom-right-radius: 30px;
+background-color: qconicalgradient(cx:1, cy:0, angle:272, stop:0 rgba(140, 144, 255, 255), stop:1 rgba(255, 255, 255, 255));</string>
+         </property>
+         <widget class="QWidget" name="horizontalLayoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>1231</width>
+            <height>161</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="recent_container" stretch="">
+           <property name="spacing">
+            <number>6</number>
+           </property>
+          </layout>
+         </widget>
         </widget>
        </widget>
        <widget class="QWidget" name="pageReport">
