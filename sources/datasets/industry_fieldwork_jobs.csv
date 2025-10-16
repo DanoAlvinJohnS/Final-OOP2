@@ -1,0 +1,42 @@
+specialization,job,type,code_or_trait,weight
+Industry & Field Work,Field Service Engineer,skill,CPE_201A,0.92
+Industry & Field Work,Field Service Engineer,skill,system_troubleshooting,0.91
+Industry & Field Work,Field Service Engineer,skill,hardware_maintenance,0.90
+Industry & Field Work,Field Service Engineer,skill,network_setup,0.89
+Industry & Field Work,trait,adaptability,0.88
+Industry & Field Work,trait,problem_solving,0.87
+
+Industry & Field Work,Industrial Automation Specialist,skill,CPE_014,0.93
+Industry & Field Work,Industrial Automation Specialist,skill,CPE_013,0.91
+Industry & Field Work,Industrial Automation Specialist,skill,process_control,0.90
+Industry & Field Work,Industrial Automation Specialist,skill,PLC_programming,0.89
+Industry & Field Work,trait,analytical_thinking,0.88
+Industry & Field Work,trait,innovation,0.86
+
+Industry & Field Work,Quality Assurance Engineer,skill,CPE_027,0.92
+Industry & Field Work,Quality Assurance Engineer,skill,data_analysis,0.90
+Industry & Field Work,Quality Assurance Engineer,skill,software_testing,0.89
+Industry & Field Work,Quality Assurance Engineer,skill,documentation,0.88
+Industry & Field Work,trait,attention_to_detail,0.87
+Industry & Field Work,trait,consistency,0.85
+
+Industry & Field Work,Process Engineer,skill,MATH_019A,0.91
+Industry & Field Work,Process Engineer,skill,process_modeling,0.90
+Industry & Field Work,Process Engineer,skill,system_optimization,0.89
+Industry & Field Work,Process Engineer,skill,control_systems,0.88
+Industry & Field Work,trait,analytical_mindset,0.87
+Industry & Field Work,trait,efficiency,0.86
+
+Industry & Field Work,Graduate Trainee (Engineering),skill,TECH_101,0.92
+Industry & Field Work,Graduate Trainee (Engineering),skill,EECO_001,0.90
+Industry & Field Work,Graduate Trainee (Engineering),skill,CPE_008,0.88
+Industry & Field Work,Graduate Trainee (Engineering),skill,CPE_010,0.87
+Industry & Field Work,trait,learning_agility,0.89
+Industry & Field Work,trait,teamwork,0.87
+
+Industry & Field Work,Maintenance Engineer,skill,CPE_201A,0.92
+Industry & Field Work,Maintenance Engineer,skill,EE_041,0.91
+Industry & Field Work,Maintenance Engineer,skill,CPE_014,0.89
+Industry & Field Work,Maintenance Engineer,skill,preventive_maintenance,0.88
+Industry & Field Work,trait,responsibility,0.87
+Industry & Field Work,trait,time_management,0.86

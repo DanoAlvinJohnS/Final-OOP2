@@ -1,0 +1,42 @@
+specialization,job,type,code_or_trait,weight
+Networking & Cybersecurity,Network Administrator,skill,CPE_020,0.95
+Networking & Cybersecurity,Network Administrator,skill,LAN_WAN_configuration,0.93
+Networking & Cybersecurity,Network Administrator,skill,router_switch_setup,0.91
+Networking & Cybersecurity,Network Administrator,skill,network_monitoring_tools,0.90
+Networking & Cybersecurity,Network Administrator,trait,documentation,0.85
+Networking & Cybersecurity,Network Administrator,trait,network_security_ethics,0.87
+
+Networking & Cybersecurity,Network Engineer,skill,packet_analysis,0.92
+Networking & Cybersecurity,Network Engineer,skill,firewall_configuration,0.90
+Networking & Cybersecurity,Network Engineer,skill,VPN_configuration,0.89
+Networking & Cybersecurity,Network Engineer,skill,vulnerability_scanning,0.88
+Networking & Cybersecurity,Network Engineer,trait,attention_to_detail,0.86
+Networking & Cybersecurity,Network Engineer,trait,systematic_thinking,0.84
+
+Networking & Cybersecurity,Cybersecurity Analyst,skill,penetration_testing,0.94
+Networking & Cybersecurity,Cybersecurity Analyst,skill,threat_detection,0.93
+Networking & Cybersecurity,Cybersecurity Analyst,skill,incident_response,0.92
+Networking & Cybersecurity,Cybersecurity Analyst,skill,data_privacy_compliance,0.90
+Networking & Cybersecurity,Cybersecurity Analyst,trait,ethical_judgment,0.89
+Networking & Cybersecurity,Cybersecurity Analyst,trait,adaptability,0.85
+
+Networking & Cybersecurity,IT Support Specialist,skill,system_maintenance,0.88
+Networking & Cybersecurity,IT Support Specialist,skill,remote_troubleshooting,0.86
+Networking & Cybersecurity,IT Support Specialist,skill,hardware_network_setup,0.85
+Networking & Cybersecurity,IT Support Specialist,trait,problem_diagnosis,0.87
+Networking & Cybersecurity,IT Support Specialist,trait,communication_skills,0.84
+Networking & Cybersecurity,IT Support Specialist,trait,user_assistance_patience,0.83
+
+Networking & Cybersecurity,Security Engineer,skill,firewall_policy_design,0.91
+Networking & Cybersecurity,Security Engineer,skill,IDS_IPS_configuration,0.90
+Networking & Cybersecurity,Security Engineer,skill,encryption_standards,0.89
+Networking & Cybersecurity,Security Engineer,skill,system_hardening,0.88
+Networking & Cybersecurity,Security Engineer,trait,confidentiality,0.87
+Networking & Cybersecurity,Security Engineer,trait,risk_assessment,0.86
+
+Networking & Cybersecurity,Network Operations Center (NOC) Technician,skill,network_diagnostics,0.89
+Networking & Cybersecurity,Network Operations Center (NOC) Technician,skill,uptime_monitoring,0.88
+Networking & Cybersecurity,Network Operations Center (NOC) Technician,skill,troubleshooting_logs,0.87
+Networking & Cybersecurity,Network Operations Center (NOC) Technician,trait,attention_to_detail,0.86
+Networking & Cybersecurity,Network Operations Center (NOC) Technician,trait,time_management,0.85
+Networking & Cybersecurity,Network Operations Center (NOC) Technician,trait,alertness,0.84

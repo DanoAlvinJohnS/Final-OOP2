@@ -1,0 +1,66 @@
+specialization,job,type,code_or_trait,weight
+Hardware & Embedded Systems,Embedded Systems Engineer,course,CPE013,0.10
+Hardware & Embedded Systems,Embedded Systems Engineer,course,CPE014,0.15
+Hardware & Embedded Systems,Embedded Systems Engineer,course,CPE016,0.10
+Hardware & Embedded Systems,Embedded Systems Engineer,course,CPE017,0.10
+Hardware & Embedded Systems,Embedded Systems Engineer,course,CPE006,0.10
+Hardware & Embedded Systems,Embedded Systems Engineer,course,CPE021,0.10
+Hardware & Embedded Systems,Embedded Systems Engineer,course,CPE010,0.08
+Hardware & Embedded Systems,Embedded Systems Engineer,trait,Problem-Solving,0.10
+Hardware & Embedded Systems,Embedded Systems Engineer,trait,Attention to Detail,0.07
+Hardware & Embedded Systems,Embedded Systems Engineer,trait,Hardware Knowledge,0.10
+
+Hardware & Embedded Systems,Firmware Developer,course,CPE014,0.15
+Hardware & Embedded Systems,Firmware Developer,course,CPE016,0.10
+Hardware & Embedded Systems,Firmware Developer,course,CPE006,0.10
+Hardware & Embedded Systems,Firmware Developer,course,CPE021,0.08
+Hardware & Embedded Systems,Firmware Developer,course,CPE013,0.08
+Hardware & Embedded Systems,Firmware Developer,course,CPE017,0.08
+Hardware & Embedded Systems,Firmware Developer,course,CPE010,0.08
+Hardware & Embedded Systems,Firmware Developer,trait,Attention to Detail,0.08
+Hardware & Embedded Systems,Firmware Developer,trait,Hardware Knowledge,0.10
+Hardware & Embedded Systems,Firmware Developer,trait,Problem-Solving,0.05
+
+Hardware & Embedded Systems,IoT Engineer,course,CPE014,0.12
+Hardware & Embedded Systems,IoT Engineer,course,CPE016,0.10
+Hardware & Embedded Systems,IoT Engineer,course,CPE006,0.10
+Hardware & Embedded Systems,IoT Engineer,course,CPE017,0.08
+Hardware & Embedded Systems,IoT Engineer,course,CPE021,0.08
+Hardware & Embedded Systems,IoT Engineer,course,CPE010,0.08
+Hardware & Embedded Systems,IoT Engineer,trait,Creativity,0.08
+Hardware & Embedded Systems,IoT Engineer,trait,Innovation,0.08
+Hardware & Embedded Systems,IoT Engineer,trait,Problem-Solving,0.10
+Hardware & Embedded Systems,IoT Engineer,trait,Hardware Knowledge,0.08
+
+Hardware & Embedded Systems,Hardware Design Engineer,course,CPE013,0.12
+Hardware & Embedded Systems,Hardware Design Engineer,course,CPE016,0.12
+Hardware & Embedded Systems,Hardware Design Engineer,course,CPE006,0.10
+Hardware & Embedded Systems,Hardware Design Engineer,course,CPE021,0.10
+Hardware & Embedded Systems,Hardware Design Engineer,course,CPE017,0.08
+Hardware & Embedded Systems,Hardware Design Engineer,trait,Attention to Detail,0.10
+Hardware & Embedded Systems,Hardware Design Engineer,trait,Hardware Knowledge,0.10
+Hardware & Embedded Systems,Hardware Design Engineer,trait,Problem-Solving,0.08
+Hardware & Embedded Systems,Hardware Design Engineer,trait,Analytical Thinking,0.10
+Hardware & Embedded Systems,Hardware Design Engineer,trait,Creativity,0.10
+
+Hardware & Embedded Systems,ASIC/FPGA Engineer,course,CPE016,0.15
+Hardware & Embedded Systems,ASIC/FPGA Engineer,course,CPE013,0.10
+Hardware & Embedded Systems,ASIC/FPGA Engineer,course,CPE006,0.10
+Hardware & Embedded Systems,ASIC/FPGA Engineer,course,CPE021,0.10
+Hardware & Embedded Systems,ASIC/FPGA Engineer,course,MATH013,0.05
+Hardware & Embedded Systems,ASIC/FPGA Engineer,course,MATH020,0.05
+Hardware & Embedded Systems,ASIC/FPGA Engineer,trait,Problem-Solving,0.10
+Hardware & Embedded Systems,ASIC/FPGA Engineer,trait,Analytical Thinking,0.10
+Hardware & Embedded Systems,ASIC/FPGA Engineer,trait,Attention to Detail,0.10
+Hardware & Embedded Systems,ASIC/FPGA Engineer,trait,Hardware Knowledge,0.05
+
+Hardware & Embedded Systems,Sensor Integration Specialist,course,CPE017,0.15
+Hardware & Embedded Systems,Sensor Integration Specialist,course,CPE014,0.10
+Hardware & Embedded Systems,Sensor Integration Specialist,course,CPE006,0.10
+Hardware & Embedded Systems,Sensor Integration Specialist,course,CPE021,0.08
+Hardware & Embedded Systems,Sensor Integration Specialist,course,CPE010,0.08
+Hardware & Embedded Systems,Sensor Integration Specialist,trait,Hardware Knowledge,0.10
+Hardware & Embedded Systems,Sensor Integration Specialist,trait,Problem-Solving,0.10
+Hardware & Embedded Systems,Sensor Integration Specialist,trait,Attention to Detail,0.08
+Hardware & Embedded Systems,Sensor Integration Specialist,trait,Creativity,0.06
+Hardware & Embedded Systems,Sensor Integration Specialist,trait,Analytical Thinking,0.05

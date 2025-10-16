@@ -1,5 +1,5 @@
-from PyQt6.QtWidgets import QWidget, QLabel, QApplication, QGridLayout, QMainWindow
-from PyQt6.QtCore import Qt, QRectF, QVariantAnimation, QEasingCurve
+from PyQt6.QtWidgets import QWidget, QLabel
+from PyQt6.QtCore import Qt, QRectF, QVariantAnimation, QEasingCurve, QPropertyAnimation, QRect, QPoint
 from PyQt6.QtGui import QPainter, QPen, QColor, QBrush, QFont, QPainterPath
 
 class FancyCircularProgress(QWidget):
@@ -125,3 +125,68 @@ class FancyCircularProgress(QWidget):
             f"QLabel{{background: transparent; font: bold {font_size}px Arial; color: #222}}"
         )
 
+def switch_widget(self, old_widget, new_widget, direction="left"):
+        """Smoothly transitions between two widgets in the given direction."""
+        if not old_widget or not new_widget:
+            return
+
+        # Ensure both widgets are in the container
+        if self.container_layout.indexOf(new_widget) == -1:
+            self.container_layout.addWidget(new_widget)
+
+        container_rect = self.container.geometry()
+        width = container_rect.width()
+        height = container_rect.height()
+
+        # Initial positions based on direction
+        if direction == "left":
+            start_geo = QRect(width, 0, width, height)
+            end_geo = QRect(0, 0, width, height)
+        elif direction == "right":
+            start_geo = QRect(-width, 0, width, height)
+            end_geo = QRect(0, 0, width, height)
+        elif direction == "up":
+            start_geo = QRect(0, height, width, height)
+            end_geo = QRect(0, 0, width, height)
+        elif direction == "down":
+            start_geo = QRect(0, -height, width, height)
+            end_geo = QRect(0, 0, width, height)
+        else:
+            return
+
+        new_widget.setGeometry(start_geo)
+        new_widget.show()
+
+        # Animation setup
+        anim = QPropertyAnimation(new_widget, b"geometry")
+        anim.setDuration(600)
+        anim.setStartValue(start_geo)
+        anim.setEndValue(end_geo)
+        anim.setEasingCurve(QEasingCurve.Type.OutCubic)
+        anim.start()
+
+        # Hide old widget after animation
+        old_widget.hide()
+        self._current_animation = anim
+        
+def shake_window(self):
+        animation = QPropertyAnimation(self, b"pos")
+        animation.setDuration(500)
+        animation.setEasingCurve(QEasingCurve.Type.InOutQuad)
+
+        current_pos = self.pos()
+        offset = 10  # shake distance
+
+        # Define start and end
+        animation.setStartValue(current_pos)
+        animation.setEndValue(current_pos)  # must have end value
+
+        # Add keyframes for shaking motion
+        animation.setKeyValueAt(0.1, current_pos + QPoint(-offset, 0))
+        animation.setKeyValueAt(0.2, current_pos + QPoint(offset, 0))
+        animation.setKeyValueAt(0.3, current_pos + QPoint(-offset, 0))
+        animation.setKeyValueAt(0.4, current_pos + QPoint(offset, 0))
+        animation.setKeyValueAt(0.5, current_pos)
+
+        animation.start(QPropertyAnimation.DeletionPolicy.DeleteWhenStopped)
+        self._shake_anim = animation

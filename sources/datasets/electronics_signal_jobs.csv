@@ -1,0 +1,43 @@
+specialization,job,type,code_or_trait,weight
+Electronics & Signal Processing,Electronics Engineer,skill,CPE_013,0.94
+Electronics & Signal Processing,Electronics Engineer,skill,CPE_017,0.91
+Electronics & Signal Processing,Electronics Engineer,skill,CPE_021,0.90
+Electronics & Signal Processing,skill,analog_circuit_design,0.89
+Electronics & Signal Processing,skill,digital_circuit_analysis,0.88
+Electronics & Signal Processing,trait,precision,0.87
+Electronics & Signal Processing,trait,systematic_thinking,0.85
+
+Electronics & Signal Processing,Signal Processing Engineer,skill,CPE_018,0.92
+Electronics & Signal Processing,Signal Processing Engineer,skill,signal_filtering,0.91
+Electronics & Signal Processing,Signal Processing Engineer,skill,frequency_analysis,0.90
+Electronics & Signal Processing,Signal Processing Engineer,skill,data_acquisition_systems,0.89
+Electronics & Signal Processing,trait,analytical_thinking,0.88
+Electronics & Signal Processing,trait,problem_solving,0.86
+
+Electronics & Signal Processing,Control Systems Engineer,skill,CPE_019,0.93
+Electronics & Signal Processing,Control Systems Engineer,skill,PID_tuning,0.91
+Electronics & Signal Processing,Control Systems Engineer,skill,simulation_tools,0.90
+Electronics & Signal Processing,Control Systems Engineer,skill,automation_integration,0.88
+Electronics & Signal Processing,trait,logical_reasoning,0.87
+Electronics & Signal Processing,trait,patience,0.85
+
+Electronics & Signal Processing,Instrumentation Engineer,skill,sensor_integration,0.91
+Electronics & Signal Processing,Instrumentation Engineer,skill,measurement_systems,0.90
+Electronics & Signal Processing,Instrumentation Engineer,skill,data_calibration,0.89
+Electronics & Signal Processing,Instrumentation Engineer,skill,control_panel_design,0.88
+Electronics & Signal Processing,trait,accuracy,0.87
+Electronics & Signal Processing,trait,documentation,0.86
+
+Electronics & Signal Processing,Design Validation Engineer,skill,PCB_testing,0.90
+Electronics & Signal Processing,Design Validation Engineer,skill,debugging_instruments,0.89
+Electronics & Signal Processing,Design Validation Engineer,skill,compliance_testing,0.88
+Electronics & Signal Processing,Design Validation Engineer,skill,schematic_verification,0.87
+Electronics & Signal Processing,trait,attention_to_detail,0.86
+Electronics & Signal Processing,trait,quality_control_mindset,0.85
+
+Electronics & Signal Processing,Product Design Engineer,skill,CPE_012,0.92
+Electronics & Signal Processing,Product Design Engineer,skill,3D_modeling,0.91
+Electronics & Signal Processing,Product Design Engineer,skill,prototype_testing,0.90
+Electronics & Signal Processing,Product Design Engineer,skill,circuit_optimization,0.89
+Electronics & Signal Processing,trait,creativity,0.88
+Electronics & Signal Processing,trait,collaboration,0.86

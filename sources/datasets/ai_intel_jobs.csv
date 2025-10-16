@@ -1,0 +1,72 @@
+specialization,job,type,code_or_trait,weight
+Artificial Intelligence & Data,Data Scientist,course,MATH019A,0.12
+Artificial Intelligence & Data,Data Scientist,course,MATH013,0.10
+Artificial Intelligence & Data,Data Scientist,course,MATH020,0.08
+Artificial Intelligence & Data,Data Scientist,course,MATH010,0.08
+Artificial Intelligence & Data,Data Scientist,course,CPE011,0.10
+Artificial Intelligence & Data,Data Scientist,course,CPE010,0.08
+Artificial Intelligence & Data,Data Scientist,course,CPE025,0.07
+Artificial Intelligence & Data,Data Scientist,trait,Analytical Thinking,0.10
+Artificial Intelligence & Data,Data Scientist,trait,Problem-Solving,0.08
+Artificial Intelligence & Data,Data Scientist,trait,Curiosity,0.09
+Artificial Intelligence & Data,Data Scientist,trait,Attention to Detail,0.10
+
+Artificial Intelligence & Data,Machine Learning Engineer,course,MATH019A,0.10
+Artificial Intelligence & Data,Machine Learning Engineer,course,MATH013,0.10
+Artificial Intelligence & Data,Machine Learning Engineer,course,MATH020,0.10
+Artificial Intelligence & Data,Machine Learning Engineer,course,MATH010,0.08
+Artificial Intelligence & Data,Machine Learning Engineer,course,CPE011,0.08
+Artificial Intelligence & Data,Machine Learning Engineer,course,CPE025,0.08
+Artificial Intelligence & Data,Machine Learning Engineer,course,CPE010,0.08
+Artificial Intelligence & Data,Machine Learning Engineer,course,CPE027,0.05
+Artificial Intelligence & Data,Machine Learning Engineer,trait,Problem-Solving,0.10
+Artificial Intelligence & Data,Machine Learning Engineer,trait,Analytical Thinking,0.08
+Artificial Intelligence & Data,Machine Learning Engineer,trait,Innovation,0.05
+Artificial Intelligence & Data,Machine Learning Engineer,trait,Mathematical Aptitude,0.10
+
+Artificial Intelligence & Data,Business Intelligence Analyst,course,MATH019A,0.12
+Artificial Intelligence & Data,Business Intelligence Analyst,course,MATH020,0.10
+Artificial Intelligence & Data,Business Intelligence Analyst,course,CPE011,0.10
+Artificial Intelligence & Data,Business Intelligence Analyst,course,EECO001,0.08
+Artificial Intelligence & Data,Business Intelligence Analyst,course,CPE010,0.08
+Artificial Intelligence & Data,Business Intelligence Analyst,course,CPE025,0.08
+Artificial Intelligence & Data,Business Intelligence Analyst,trait,Analytical Thinking,0.10
+Artificial Intelligence & Data,Business Intelligence Analyst,trait,Communication,0.08
+Artificial Intelligence & Data,Business Intelligence Analyst,trait,Decision-Making,0.08
+Artificial Intelligence & Data,Business Intelligence Analyst,trait,Attention to Detail,0.08
+
+Artificial Intelligence & Data,AI Researcher,course,MATH019A,0.10
+Artificial Intelligence & Data,AI Researcher,course,MATH013,0.10
+Artificial Intelligence & Data,AI Researcher,course,MATH010,0.10
+Artificial Intelligence & Data,AI Researcher,course,MATH020,0.10
+Artificial Intelligence & Data,AI Researcher,course,CPE011,0.08
+Artificial Intelligence & Data,AI Researcher,course,CPE010,0.08
+Artificial Intelligence & Data,AI Researcher,course,CPE027,0.05
+Artificial Intelligence & Data,AI Researcher,trait,Innovation,0.10
+Artificial Intelligence & Data,AI Researcher,trait,Analytical Thinking,0.10
+Artificial Intelligence & Data,AI Researcher,trait,Curiosity,0.09
+Artificial Intelligence & Data,AI Researcher,trait,Problem-Solving,0.10
+
+Artificial Intelligence & Data,Data Engineer,course,MATH019A,0.10
+Artificial Intelligence & Data,Data Engineer,course,MATH013,0.08
+Artificial Intelligence & Data,Data Engineer,course,MATH020,0.08
+Artificial Intelligence & Data,Data Engineer,course,CPE011,0.10
+Artificial Intelligence & Data,Data Engineer,course,CPE010,0.10
+Artificial Intelligence & Data,Data Engineer,course,CPE025,0.08
+Artificial Intelligence & Data,Data Engineer,course,CPE022,0.05
+Artificial Intelligence & Data,Data Engineer,trait,Attention to Detail,0.10
+Artificial Intelligence & Data,Data Engineer,trait,Analytical Thinking,0.08
+Artificial Intelligence & Data,Data Engineer,trait,Problem-Solving,0.10
+Artificial Intelligence & Data,Data Engineer,trait,Adaptability,0.08
+
+Artificial Intelligence & Data,Computer Vision Specialist,course,MATH019A,0.10
+Artificial Intelligence & Data,Computer Vision Specialist,course,MATH013,0.10
+Artificial Intelligence & Data,Computer Vision Specialist,course,MATH020,0.08
+Artificial Intelligence & Data,Computer Vision Specialist,course,CPE027,0.10
+Artificial Intelligence & Data,Computer Vision Specialist,course,CPE025,0.10
+Artificial Intelligence & Data,Computer Vision Specialist,course,CPE010,0.08
+Artificial Intelligence & Data,Computer Vision Specialist,course,CPE011,0.07
+Artificial Intelligence & Data,Computer Vision Specialist,trait,Problem-Solving,0.10
+Artificial Intelligence & Data,Computer Vision Specialist,trait,Innovation,0.08
+Artificial Intelligence & Data,Computer Vision Specialist,trait,Creativity,0.07
+Artificial Intelligence & Data,Computer Vision Specialist,trait,Attention to Detail,0.12

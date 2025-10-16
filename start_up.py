@@ -1,14 +1,18 @@
 from PyQt6.QtWidgets import (
-    QMainWindow, QWidget, QVBoxLayout, QTabWidget,
+    QMainWindow, QWidget, QVBoxLayout, 
     QGraphicsTextItem, QGraphicsView,
-    QGraphicsScene, QGraphicsOpacityEffect
+    QGraphicsScene, QGraphicsOpacityEffect, QGraphicsDropShadowEffect
 )
 from PyQt6.QtCore import (
     Qt, QTimer, QPropertyAnimation, QEasingCurve, QPointF, QPoint,
-    QRandomGenerator, pyqtSignal, pyqtProperty, QParallelAnimationGroup
+    QRandomGenerator, pyqtSignal, pyqtProperty, QParallelAnimationGroup, QPropertyAnimation, QPoint
 )
+
 from PyQt6.QtGui import QFont, QBrush, QColor
+import re
+from animations import switch_widget, shake_window
 from dashboard_gui import login_window, DashboardWidget
+
 from PyQt6 import uic
 
 # ---------- Animated Text Item ----------
@@ -59,17 +63,10 @@ class PlayfulSplash(QWidget):
         if parent:
             self.setGeometry(parent.rect())
 
-        self.setStyleSheet("background-color: #b8e2f4;")
+        # --- INITIAL BACKGROUND (start white) ---
+        self.setStyleSheet("background-color: white;")
 
-        # Graphics view + scene
-        self.view = QGraphicsView(self)
-        self.view.setGeometry(self.rect())
-        self.scene = QGraphicsScene(self)
-        self.view.setScene(self.scene)
-
-        # Background
-        self.bg_color = QColor("#ffffff")
-        self.scene.setBackgroundBrush(QBrush(self.bg_color))
+        # --- Create one GraphicsView and Scene ---
         self.view = QGraphicsView(self)
         self.view.setGeometry(self.rect())
         self.view.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
@@ -77,6 +74,11 @@ class PlayfulSplash(QWidget):
 
         self.scene = QGraphicsScene(self)
         self.view.setScene(self.scene)
+
+        # --- Start background color ---
+        self.bg_color = QColor("#ffffff")  # start white
+        self.scene.setBackgroundBrush(QBrush(self.bg_color))
+
 
         # TITLE w animatable properties
         self.title = AnimatedTextItem("Career Explorer")
@@ -212,17 +214,17 @@ class PlayfulSplash(QWidget):
         if self.bg_progress < 100:
             self.bg_progress += 2
 
-            # --- light blue (#b8e2f4) to dark navy (#0d1b2a) ---
-            r = int(184 + (13 - 184) * self.bg_progress / 100)
-            g = int(226 + (27 - 226) * self.bg_progress / 100)
-            b = int(244 + (42 - 244) * self.bg_progress / 100)
+            # --- white (#ffffff) to dark navy (#0d1b2a) ---
+            r = int(255 + (13 - 255) * self.bg_progress / 100)
+            g = int(255 + (27 - 255) * self.bg_progress / 100)
+            b = int(255 + (42 - 255) * self.bg_progress / 100)
             self.bg_color = QColor(r, g, b)
             self.scene.setBackgroundBrush(QBrush(self.bg_color))
 
-            # --- dark navy (#0d1b2a) to light blue (#b8e2f4) ---
-            tr = int(13 + (184 - 13) * self.bg_progress / 100)
-            tg = int(27 + (226 - 27) * self.bg_progress / 100)
-            tb = int(42 + (244 - 42) * self.bg_progress / 100)
+            # --- dark navy (#0d1b2a) to white (#ffffff) for title text ---
+            tr = int(13 + (255 - 13) * self.bg_progress / 100)
+            tg = int(27 + (255 - 27) * self.bg_progress / 100)
+            tb = int(42 + (255 - 42) * self.bg_progress / 100)
             self.title.setDefaultTextColor(QColor(tr, tg, tb))
         else:
             self.bg_timer.stop()
@@ -267,7 +269,7 @@ class PlayfulSplash(QWidget):
             fade_anim.setDuration(2000)
             fade_anim.setStartValue(1.0)
             fade_anim.setEndValue(0.0)
-
+            
             # Rotation animation
             rot_anim = QPropertyAnimation(shape, b"rotation")
             rot_anim.setDuration(1500)
@@ -289,38 +291,175 @@ class CareerExplorer(QMainWindow):
         self.resize(1500, 700)
         self.setWindowFlags(Qt.WindowType.FramelessWindowHint)
 
+        # Main container
         self.container = QWidget(self)
         self.container_layout = QVBoxLayout(self.container)
         self.container_layout.setContentsMargins(0, 0, 0, 0)
-        self.container.setStyleSheet("background-color: white;")
 
-        self.login_widget = login_window(self)
+        # create widgets once
+        self.login_widget = login_window(self, "login")
+        self.register_widget = login_window(self, "register")
+        # create dashboard without username for now
+        self.dashboard_widget = DashboardWidget(self, "")  
+
+        # add to container layout and show only login initially
         self.container_layout.addWidget(self.login_widget)
+        self.container_layout.addWidget(self.register_widget)
+        self.container_layout.addWidget(self.dashboard_widget)
+        self.register_widget.hide()
+        self.dashboard_widget.hide()
+
+        # connect signals once
         self.login_widget.login_btn.clicked.connect(self.login)
+        self.login_widget.reg_btn.clicked.connect(self.show_register)
+        self.register_widget.Sign_in.clicked.connect(self.validate)
+        self.register_widget.go_back_btn.clicked.connect(self.show_login)
+
+        # make sure dashboard logout works every time
+        try:
+            self.dashboard_widget.log_out.clicked.connect(self.show_login)
+        except Exception:
+            pass
 
         self.wrapper = QWidget(self)
         self.wrapper_layout = QVBoxLayout(self.wrapper)
         self.wrapper_layout.setContentsMargins(0, 0, 0, 0)
         self.wrapper_layout.addWidget(self.container)
-
-        self.container.hide()
         self.setCentralWidget(self.wrapper)
 
         self.overlay = PlayfulSplash(self)
         self.overlay.show()
 
-    def login(self):
-        username = self.login_widget.login_input.text()
-        password = self.login_widget.password_input.text()
+    def switch_to(self, from_widget, to_widget, direction="left"):
+        """
+        Use your existing switch_widget if available to keep animations.
+        Falls back to show/hide if switch_widget isn't available.
+        """
+        try:
+            switch_widget(self, from_widget, to_widget, direction=direction)
+        except Exception:
+            from_widget.hide()
+            to_widget.show()
 
-        if username == "admin" and password == "password":
-            print("Login successful!")
-            self.container_layout.removeWidget(self.login_widget)
-            self.login_widget.deleteLater()
+    def show_login(self):
+        try:
+            self.login_widget.login_input.clear()
+            self.login_widget.password_input.clear()
+        except Exception:
+            pass
 
-            self.dashboard_widget = DashboardWidget(self)
-            self.container_layout.addWidget(self.dashboard_widget)
-            self.dashboard_widget.show()
+        if self.dashboard_widget.isVisible():
+            self.switch_to(self.dashboard_widget, self.login_widget, direction="down")
+        elif self.register_widget.isVisible():
+            self.switch_to(self.register_widget, self.login_widget, direction="right")
         else:
-            print("Invalid credentials. Please try again.")
+            self.login_widget.show()
+            self.register_widget.hide()
+            self.dashboard_widget.hide()
 
+    def show_register(self):
+        if self.login_widget.isVisible():
+            self.switch_to(self.login_widget, self.register_widget, direction="left")
+        else:
+            self.register_widget.show()
+            self.login_widget.hide()
+            self.dashboard_widget.hide()
+
+    def show_dashboard(self, username):
+        if self.login_widget.isVisible():
+            self.switch_to(self.login_widget, self.dashboard_widget, direction="up")
+
+        else:
+            self.login_widget.hide()
+            self.register_widget.hide()
+            self.dashboard_widget.show()
+            
+        if hasattr(self.dashboard_widget, "user_name"):
+            self.dashboard_widget.user_name.setText(username)
+        else:
+            self.dashboard_widget.username = username
+
+        try:
+            try:
+                self.dashboard_widget.log_out.clicked.disconnect()
+            except Exception:
+                pass
+            self.dashboard_widget.log_out.clicked.connect(self.show_login)
+        except Exception:
+            pass
+
+        from dashboard_handler import populate_recent_data
+        recent_data = [
+            {
+                "name": "Juan Dela Cruz",
+                "date": "2025-10-15",
+                "specialized_course": "Web Dev",
+                "specialized_course_pct": 85,
+                "specialized_job": "Frontend Dev",
+                "specialized_job_pct": 90
+            },
+        ]
+
+        populate_recent_data(
+            self.dashboard_widget.recent_container,
+            recent_data,
+            on_click=self.onclick
+        )
+
+    def functions_dashboard(self, username):
+        self.show_dashboard(username)
+        
+
+    def onclick(self, recent_data):
+        print("Clicked card:", recent_data)
+
+    def login(self):
+        from data_handler import get_all_users, binary_search_user
+        username = self.login_widget.login_input.text().strip()
+        password = self.login_widget.password_input.text().strip()
+
+        if not username or not password:
+            self.login_widget.error_message.setText("Please fill up everything.")
+            self.login_widget.error_message.setStyleSheet("color: red; font-weight: bold;")
+            shake_window(self)
+            return
+
+        users = get_all_users()
+        user = binary_search_user(users, username)
+
+        if user and user["password"] == password:
+            print("Login successful!")
+            self.show_dashboard(username)
+        else:
+            self.login_widget.error_message.setText("Invalid credentials. Please try again.")
+            self.login_widget.error_message.setStyleSheet("color: red; font-weight: bold;")
+            shake_window(self)
+
+    def validate(self):
+        from data_handler import save_user
+        email = self.register_widget.rEmail_input.text().strip()
+        password = self.register_widget.rPass_input.text().strip()
+        username = self.register_widget.rUser_input.text().strip()
+
+        def show_error(message):
+            self.register_widget.error_message.setText(message)
+            self.register_widget.error_message.setStyleSheet("color: red; font-weight: bold;")
+            shake_window(self)
+
+        if not email or not password or not username:
+            show_error("Please fill up everything.")
+            return
+
+        pattern = r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*(),.?":{}|<>]).{8,}$'
+        if not re.match(pattern, password):
+            show_error("Password must be 8+ chars, upper, lower, number & symbol.")
+            return
+
+        if not re.match(r"^[^@]+@[^@]+\.[^@]+$", email):
+            show_error("Please enter a valid email address.")
+            return
+
+        self.register_widget.error_message.setText("Registration successful!")
+        self.register_widget.error_message.setStyleSheet("color: green; font-weight: bold;")
+        user_id = save_user(username, password, email)
+        print(f"User saved with ID {user_id}")

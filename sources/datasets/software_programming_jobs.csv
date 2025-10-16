@@ -1,0 +1,58 @@
+specialization,job,type,code_or_trait,weight
+Software & Programming,Software Developer,course,CPE 007,0.10
+Software & Programming,Software Developer,course,CPE 009,0.15
+Software & Programming,Software Developer,course,CPE 010,0.15
+Software & Programming,Software Developer,course,CPE 011,0.10
+Software & Programming,Software Developer,course,CPE 025,0.10
+Software & Programming,Software Developer,course,MATH 006,0.05
+Software & Programming,Software Developer,trait,Analytical Thinking,0.15
+Software & Programming,Software Developer,trait,Problem Solving,0.10
+Software & Programming,Software Developer,trait,Adaptability,0.10
+
+Software & Programming,Full Stack Engineer,course,CPE 009,0.15
+Software & Programming,Full Stack Engineer,course,CPE 010,0.10
+Software & Programming,Full Stack Engineer,course,CPE 011,0.10
+Software & Programming,Full Stack Engineer,course,CPE 025,0.10
+Software & Programming,Full Stack Engineer,course,CPE 021,0.10
+Software & Programming,Full Stack Engineer,course,CPE 022,0.10
+Software & Programming,Full Stack Engineer,trait,Analytical Thinking,0.10
+Software & Programming,Full Stack Engineer,trait,Creativity,0.10
+Software & Programming,Full Stack Engineer,trait,Teamwork,0.15
+
+Software & Programming,Mobile App Developer,course,CPE 009,0.15
+Software & Programming,Mobile App Developer,course,CPE 010,0.15
+Software & Programming,Mobile App Developer,course,CPE 025,0.10
+Software & Programming,Mobile App Developer,course,CPE 028,0.10
+Software & Programming,Mobile App Developer,course,CPE 021,0.10
+Software & Programming,Mobile App Developer,trait,Creativity,0.15
+Software & Programming,Mobile App Developer,trait,Analytical Thinking,0.10
+Software & Programming,Mobile App Developer,trait,User Focus,0.15
+
+Software & Programming,Game Developer,course,CPE 009,0.15
+Software & Programming,Game Developer,course,CPE 010,0.10
+Software & Programming,Game Developer,course,CPE 025,0.10
+Software & Programming,Game Developer,course,CPE 028,0.10
+Software & Programming,Game Developer,course,MATH 013,0.10
+Software & Programming,Game Developer,trait,Creativity,0.20
+Software & Programming,Game Developer,trait,Problem Solving,0.15
+Software & Programming,Game Developer,trait,Perseverance,0.10
+
+Software & Programming,Web Developer,course,CPE 009,0.15
+Software & Programming,Web Developer,course,CPE 010,0.10
+Software & Programming,Web Developer,course,CPE 011,0.15
+Software & Programming,Web Developer,course,CPE 025,0.10
+Software & Programming,Web Developer,course,CPE 028,0.10
+Software & Programming,Web Developer,trait,Creativity,0.10
+Software & Programming,Web Developer,trait,Analytical Thinking,0.10
+Software & Programming,Web Developer,trait,Teamwork,0.10
+Software & Programming,Web Developer,trait,Communication,0.10
+
+Software & Programming,DevOps Engineer,course,CPE 021,0.10
+Software & Programming,DevOps Engineer,course,CPE 022,0.15
+Software & Programming,DevOps Engineer,course,CPE 025,0.10
+Software & Programming,DevOps Engineer,course,CPE 010,0.10
+Software & Programming,DevOps Engineer,course,CPE 018,0.10
+Software & Programming,DevOps Engineer,trait,Problem Solving,0.10
+Software & Programming,DevOps Engineer,trait,Adaptability,0.10
+Software & Programming,DevOps Engineer,trait,Teamwork,0.10
+Software & Programming,DevOps Engineer,trait,Organization,0.15

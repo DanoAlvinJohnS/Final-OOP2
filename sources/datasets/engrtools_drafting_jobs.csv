@@ -1,0 +1,35 @@
+specialization,job,type,code_or_trait,weight
+Engineering Tools & Drafting,CAD Designer,skill,CPE_003,0.93
+Engineering Tools & Drafting,CAD Designer,skill,3D_modeling,0.91
+Engineering Tools & Drafting,CAD Designer,skill,technical_drawing,0.90
+Engineering Tools & Drafting,CAD Designer,skill,autocad_proficiency,0.89
+Engineering Tools & Drafting,trait,attention_to_detail,0.87
+Engineering Tools & Drafting,trait,spatial_intelligence,0.86
+
+Engineering Tools & Drafting,Product Design Engineer,skill,CPE_304,0.93
+Engineering Tools & Drafting,Product Design Engineer,skill,prototype_design,0.91
+Engineering Tools & Drafting,Product Design Engineer,skill,mechanical_concepts,0.90
+Engineering Tools & Drafting,Product Design Engineer,skill,design_validation,0.89
+Engineering Tools & Drafting,trait,creativity,0.87
+Engineering Tools & Drafting,trait,critical_thinking,0.86
+
+Engineering Tools & Drafting,Technical Illustrator,skill,CPE_003,0.92
+Engineering Tools & Drafting,Technical Illustrator,skill,blueprint_creation,0.90
+Engineering Tools & Drafting,Technical Illustrator,skill,rendering,0.89
+Engineering Tools & Drafting,Technical Illustrator,skill,diagram_annotation,0.88
+Engineering Tools & Drafting,trait,clarity_in_communication,0.87
+Engineering Tools & Drafting,trait,organization,0.85
+
+Engineering Tools & Drafting,Design Validation Engineer,skill,CPE_027,0.92
+Engineering Tools & Drafting,Design Validation Engineer,skill,testing_procedures,0.90
+Engineering Tools & Drafting,Design Validation Engineer,skill,hardware_simulation,0.89
+Engineering Tools & Drafting,Design Validation Engineer,skill,component_analysis,0.88
+Engineering Tools & Drafting,trait,accuracy,0.87
+Engineering Tools & Drafting,trait,problem_solving,0.86
+
+Engineering Tools & Drafting,Electronics Engineer,skill,CPE_013,0.91
+Engineering Tools & Drafting,Electronics Engineer,skill,circuit_layout,0.90
+Engineering Tools & Drafting,Electronics Engineer,skill,schematic_design,0.89
+Engineering Tools & Drafting,Electronics Engineer,skill,board_routing,0.88
+Engineering Tools & Drafting,trait,precision,0.87
+Engineering Tools & Drafting,trait,focus,0.85
