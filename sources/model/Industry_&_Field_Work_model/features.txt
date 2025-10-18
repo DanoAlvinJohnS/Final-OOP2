@@ -1,0 +1,137 @@
+3D_modeling
+Adaptability
+Analytical Thinking
+Attention to Detail
+CPE 007
+CPE 009
+CPE 010
+CPE 011
+CPE 018
+CPE 021
+CPE 022
+CPE 025
+CPE 028
+CPE006
+CPE010
+CPE011
+CPE013
+CPE014
+CPE016
+CPE017
+CPE021
+CPE022
+CPE025
+CPE027
+CPE_003
+CPE_008
+CPE_010
+CPE_012
+CPE_013
+CPE_014
+CPE_017
+CPE_018
+CPE_019
+CPE_020
+CPE_021
+CPE_027
+CPE_201A
+CPE_304
+Communication
+Creativity
+Curiosity
+Decision-Making
+EECO001
+EECO_001
+EE_041
+Hardware Knowledge
+IDS_IPS_configuration
+Innovation
+LAN_WAN_configuration
+MATH 006
+MATH 013
+MATH010
+MATH013
+MATH019A
+MATH020
+MATH_019A
+Mathematical Aptitude
+Organization
+PCB_testing
+PID_tuning
+PLC_programming
+Perseverance
+Problem Solving
+Problem-Solving
+TECH_101
+Teamwork
+User Focus
+VPN_configuration
+adaptability
+alertness
+attention_to_detail
+autocad_proficiency
+automation_integration
+blueprint_creation
+board_routing
+circuit_layout
+circuit_optimization
+communication_skills
+compliance_testing
+component_analysis
+confidentiality
+control_panel_design
+control_systems
+data_acquisition_systems
+data_analysis
+data_calibration
+data_privacy_compliance
+debugging_instruments
+design_validation
+diagram_annotation
+documentation
+encryption_standards
+ethical_judgment
+firewall_configuration
+firewall_policy_design
+frequency_analysis
+hardware_maintenance
+hardware_network_setup
+hardware_simulation
+incident_response
+measurement_systems
+mechanical_concepts
+network_diagnostics
+network_monitoring_tools
+network_security_ethics
+network_setup
+packet_analysis
+penetration_testing
+preventive_maintenance
+problem_diagnosis
+process_control
+process_modeling
+prototype_design
+prototype_testing
+remote_troubleshooting
+rendering
+risk_assessment
+router_switch_setup
+schematic_design
+schematic_verification
+sensor_integration
+signal_filtering
+simulation_tools
+software_testing
+system_hardening
+system_maintenance
+system_optimization
+system_troubleshooting
+systematic_thinking
+technical_drawing
+testing_procedures
+threat_detection
+time_management
+troubleshooting_logs
+uptime_monitoring
+user_assistance_patience
+vulnerability_scanning

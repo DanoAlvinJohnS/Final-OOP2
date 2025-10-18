@@ -398,9 +398,7 @@ color: qconicalgradient(cx:0, cy:0.5, angle:269.2, stop:0.0222222 rgba(79, 86, 2
     padding: 10px 26px;
 	background-color: qconicalgradient(cx:1, cy:1, angle:88.1, stop:0.0222222 rgba(13, 27, 42, 255), stop:1 rgba(147, 161, 255, 255));
 
-    backdrop-filter: blur(10px);
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
-    transition: all 0.25s ease-in-out;
+
 }
 
 QPushButton:hover {
@@ -411,8 +409,7 @@ QPushButton:hover {
         stop:0.5 rgba(55, 63, 85, 200),
         stop:1 rgba(45, 52, 75, 200)
     );
-    box-shadow: 0px 6px 16px rgba(79, 86, 255, 0.35);
-    transform: scale(1.04);
+
 }
 
 QPushButton:pressed {
@@ -423,8 +420,7 @@ QPushButton:pressed {
         stop:0.5 rgba(25, 30, 50, 220),
         stop:1 rgba(20, 25, 40, 220)
     );
-    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3);
-    transform: scale(0.97);
+
 }
 
 </string>

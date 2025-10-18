@@ -1,0 +1,16 @@
+Specialization: Electronics & Signal Processing
+Total samples: 9000
+Model test accuracy: 1.0000
+
+                            precision    recall  f1-score   support
+
+  Control Systems Engineer       1.00      1.00      1.00       300
+Design Validation Engineer       1.00      1.00      1.00       300
+      Electronics Engineer       1.00      1.00      1.00       300
+  Instrumentation Engineer       1.00      1.00      1.00       300
+   Product Design Engineer       1.00      1.00      1.00       300
+Signal Processing Engineer       1.00      1.00      1.00       300
+
+                  accuracy                           1.00      1800
+                 macro avg       1.00      1.00      1.00      1800
+              weighted avg       1.00      1.00      1.00      1800

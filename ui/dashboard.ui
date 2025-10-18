@@ -279,7 +279,7 @@ color: qconicalgradient(cx:1, cy:0.04, angle:272, stop:0 rgba(255, 255, 255, 255
          </property>
         </widget>
        </widget>
-       <widget class="QWidget" name="pageReport">
+       <widget class="QWidget" name="pageCreate">
         <property name="styleSheet">
          <string notr="true">background-color:white</string>
         </property>
@@ -400,7 +400,7 @@ border-color: transparent;</string>
           <string>Log out</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton">
+        <widget class="QPushButton" name="generate_data">
          <property name="geometry">
           <rect>
            <x>40</x>
@@ -421,14 +421,17 @@ background-color: qconicalgradient(cx:0, cy:0.994318, angle:96.5, stop:0.4 rgba(
           <string>Create data</string>
          </property>
         </widget>
-        <widget class="QComboBox" name="comboBox">
+        <widget class="QWidget" name="visual_data" native="true">
          <property name="geometry">
           <rect>
-           <x>260</x>
-           <y>180</y>
-           <width>271</width>
-           <height>24</height>
+           <x>500</x>
+           <y>130</y>
+           <width>761</width>
+           <height>541</height>
           </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: black;</string>
          </property>
         </widget>
        </widget>
