@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1503</width>
+    <width>1475</width>
     <height>702</height>
    </rect>
   </property>
@@ -54,7 +54,7 @@ font: 28pt &quot;Calibri&quot;;</string>
        </item>
        <item>
         <property name="text">
-         <string> Create</string>
+         <string> Report</string>
         </property>
        </item>
        <item>
@@ -76,7 +76,7 @@ font: 28pt &quot;Calibri&quot;;</string>
 </string>
        </property>
        <property name="currentIndex">
-        <number>1</number>
+        <number>2</number>
        </property>
        <widget class="QWidget" name="pageHome">
         <property name="styleSheet">
@@ -226,7 +226,7 @@ background-color: qconicalgradient(cx:1, cy:0, angle:272, stop:0 rgba(140, 144, 
           </property>
           <layout class="QHBoxLayout" name="recent_container">
            <property name="spacing">
-            <number>6</number>
+            <number>20</number>
            </property>
           </layout>
          </widget>
@@ -286,9 +286,9 @@ color: qconicalgradient(cx:1, cy:0.04, angle:272, stop:0 rgba(255, 255, 255, 255
         <widget class="QLabel" name="background1_3">
          <property name="geometry">
           <rect>
-           <x>0</x>
+           <x>-30</x>
            <y>0</y>
-           <width>1271</width>
+           <width>311</width>
            <height>131</height>
           </rect>
          </property>
@@ -306,7 +306,7 @@ background-color: qconicalgradient(cx:0, cy:0.994318, angle:96.5, stop:0.4 rgba(
         <widget class="QLabel" name="user_name_3">
          <property name="geometry">
           <rect>
-           <x>30</x>
+           <x>20</x>
            <y>0</y>
            <width>401</width>
            <height>81</height>
@@ -324,13 +324,13 @@ background-color: qconicalgradient(cx:0, cy:0.994318, angle:96.5, stop:0.4 rgba(
 </string>
          </property>
          <property name="text">
-          <string>Create</string>
+          <string>Report</string>
          </property>
         </widget>
         <widget class="QLabel" name="Register_Label_4">
          <property name="geometry">
           <rect>
-           <x>30</x>
+           <x>20</x>
            <y>40</y>
            <width>751</width>
            <height>111</height>
@@ -352,100 +352,244 @@ color: qconicalgradient(cx:1, cy:0.04, angle:272, stop:0 rgba(255, 255, 255, 255
           <string>Career Explorer</string>
          </property>
         </widget>
-        <widget class="QLabel" name="user_name_4">
+        <widget class="QPushButton" name="generate_data">
          <property name="geometry">
           <rect>
-           <x>1070</x>
-           <y>50</y>
-           <width>111</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>11</pointsize>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: transparent;</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="log_out_2">
-         <property name="geometry">
-          <rect>
-           <x>1080</x>
-           <y>70</y>
-           <width>91</width>
-           <height>24</height>
+           <x>-20</x>
+           <y>140</y>
+           <width>251</width>
+           <height>51</height>
           </rect>
          </property>
          <property name="font">
           <font>
            <family>Segoe UI</family>
-           <pointsize>9</pointsize>
+           <pointsize>20</pointsize>
            <italic>false</italic>
+           <fontweight>DemiBold</fontweight>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+border-top-right-radius: 20px;
+font: 600 20pt &quot;Segoe UI&quot;;
+color:black;
+background-color:qconicalgradient(cx:1, cy:0, angle:0, stop:0 rgba(140, 144, 255, 255), stop:0.994444 rgba(255, 255, 255, 255))</string>
+         </property>
+         <property name="text">
+          <string>Create Data   </string>
+         </property>
+        </widget>
+        <widget class="QWidget" name="predicting_widget" native="true">
+         <property name="geometry">
+          <rect>
+           <x>310</x>
+           <y>20</y>
+           <width>911</width>
+           <height>631</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-top-left-radius: 80px;
+border-bottom-left-radius: 80px;
+border-top-right-radius: 80px;
+border-bottom-right-radius: 80px;
+color: black;
+</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="view_graph">
+         <property name="geometry">
+          <rect>
+           <x>-20</x>
+           <y>200</y>
+           <width>251</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+           <pointsize>20</pointsize>
+           <italic>false</italic>
+           <fontweight>DemiBold</fontweight>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+border-top-right-radius: 20px;
+font: 600 20pt &quot;Segoe UI&quot;;
+color:black;
+background-color:qconicalgradient(cx:1, cy:0, angle:0, stop:0 rgba(140, 144, 255, 255), stop:0.994444 rgba(255, 255, 255, 255))</string>
+         </property>
+         <property name="text">
+          <string>View Graph    </string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_2">
+         <property name="geometry">
+          <rect>
+           <x>300</x>
+           <y>10</y>
+           <width>931</width>
+           <height>651</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-top-left-radius: 80px;
+border-bottom-left-radius: 80px;
+border-top-right-radius: 80px;
+border-bottom-right-radius: 80px;
+
+
+border-width: 5px;
+border-style: solid;
+border-color: qconicalgradient(cx:1, cy:0.017, angle:304.3, stop:0.655556 rgba(0, 31, 50, 255), stop:0.994444 rgba(102, 17, 202, 255));
+
+</string>
+         </property>
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+        <zorder>label_2</zorder>
+        <zorder>background1_3</zorder>
+        <zorder>user_name_3</zorder>
+        <zorder>Register_Label_4</zorder>
+        <zorder>generate_data</zorder>
+        <zorder>predicting_widget</zorder>
+        <zorder>view_graph</zorder>
+       </widget>
+       <widget class="QWidget" name="pageStatistic">
+        <property name="styleSheet">
+         <string notr="true">background-color:white</string>
+        </property>
+        <widget class="QLabel" name="background1_4">
+         <property name="geometry">
+          <rect>
+           <x>-30</x>
+           <y>0</y>
+           <width>381</width>
+           <height>131</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-top-left-radius: 0px;
+border-bottom-left-radius: 30px;
+border-top-right-radius: 0px;
+border-bottom-right-radius: 30px;
+background-color: qconicalgradient(cx:0, cy:0.994318, angle:96.5, stop:0.4 rgba(36, 0, 143, 255), stop:1 rgba(147, 161, 255, 255));</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Register_Label_6">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>40</y>
+           <width>751</width>
+           <height>111</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Century Gothic</family>
+           <pointsize>24</pointsize>
            <bold>false</bold>
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color:transparent;
-font: 9pt &quot;Segoe UI&quot;;
-border-color: transparent;</string>
+          <string notr="true">background-color: transparent;
+
+color: qconicalgradient(cx:1, cy:0.04, angle:272, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(255, 255, 255, 255));</string>
          </property>
          <property name="text">
-          <string>Log out</string>
+          <string>Career Explorer</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="generate_data">
+        <widget class="QLabel" name="statistic">
          <property name="geometry">
           <rect>
-           <x>40</x>
-           <y>180</y>
-           <width>201</width>
-           <height>51</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">border-top-left-radius: 20px;
-border-bottom-left-radius: 20px;
-border-top-right-radius: 20px;
-border-bottom-right-radius: 20px;
-font: 16pt &quot;Arial&quot;;
-background-color: qconicalgradient(cx:0, cy:0.994318, angle:96.5, stop:0.4 rgba(36, 0, 143, 255), stop:1 rgba(147, 161, 255, 255));</string>
-         </property>
-         <property name="text">
-          <string>Create data</string>
-         </property>
-        </widget>
-        <widget class="QWidget" name="visual_data" native="true">
-         <property name="geometry">
-          <rect>
-           <x>500</x>
-           <y>130</y>
-           <width>761</width>
-           <height>541</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: black;</string>
-         </property>
-        </widget>
-       </widget>
-       <widget class="QWidget" name="statistic">
-        <widget class="QWidget" name="gridLayoutWidget">
-         <property name="geometry">
-          <rect>
-           <x>0</x>
+           <x>20</x>
            <y>0</y>
-           <width>1111</width>
-           <height>681</height>
+           <width>401</width>
+           <height>81</height>
           </rect>
          </property>
-         <layout class="QGridLayout" name="progressGrid"/>
+         <property name="font">
+          <font>
+           <pointsize>48</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: transparent;
+
+</string>
+         </property>
+         <property name="text">
+          <string>Statistics</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="btnViewSelected">
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>180</y>
+           <width>171</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+           <pointsize>20</pointsize>
+           <italic>false</italic>
+           <fontweight>DemiBold</fontweight>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;
+border-bottom-right-radius: 20px;
+border-top-right-radius: 20px;
+font: 600 20pt &quot;Segoe UI&quot;;
+color:black;
+background-color:qconicalgradient(cx:1, cy:0, angle:0, stop:0 rgba(140, 144, 255, 255), stop:0.994444 rgba(255, 255, 255, 255))</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QWidget" name="progressCircular" native="true">
+         <property name="geometry">
+          <rect>
+           <x>810</x>
+           <y>230</y>
+           <width>301</width>
+           <height>281</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QListWidget" name="listFiles">
+         <property name="geometry">
+          <rect>
+           <x>420</x>
+           <y>160</y>
+           <width>241</width>
+           <height>451</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: qconicalgradient(cx:0, cy:1, angle:106.7, stop:0 rgba(99, 216, 255, 255), stop:1 rgba(255, 255, 255, 255));
+border-top-left-radius: 30px;
+border-top-right-radius: 30px;
+border-bottom-left-radius: 30px;
+border-bottom-right-radius: 30px;</string>
+         </property>
         </widget>
        </widget>
        <widget class="QWidget" name="widget">
