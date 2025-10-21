@@ -1,8 +1,7 @@
 from PyQt6 import uic
 from PyQt6.QtWidgets import QWidget, QScrollArea, QFrame, QVBoxLayout
 from PyQt6.QtCore import Qt
-from animations import FancyCircularProgress
-
+from ui_handler.animations import FancyCircularProgress
 
 class login_window(QWidget):
     def __init__(self, parent=None, status=None):

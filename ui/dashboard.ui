@@ -536,8 +536,8 @@ color: qconicalgradient(cx:1, cy:0.04, angle:272, stop:0 rgba(255, 255, 255, 255
         <widget class="QPushButton" name="btnViewSelected">
          <property name="geometry">
           <rect>
-           <x>110</x>
-           <y>180</y>
+           <x>30</x>
+           <y>590</y>
            <width>171</width>
            <height>41</height>
           </rect>
@@ -574,13 +574,29 @@ background-color:qconicalgradient(cx:1, cy:0, angle:0, stop:0 rgba(140, 144, 255
           </rect>
          </property>
         </widget>
+        <widget class="QLabel" name="label_3">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>550</y>
+           <width>171</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:black</string>
+         </property>
+         <property name="text">
+          <string>Selected:</string>
+         </property>
+        </widget>
         <widget class="QListWidget" name="listFiles">
          <property name="geometry">
           <rect>
-           <x>420</x>
-           <y>160</y>
-           <width>241</width>
-           <height>451</height>
+           <x>30</x>
+           <y>300</y>
+           <width>171</width>
+           <height>251</height>
           </rect>
          </property>
          <property name="styleSheet">

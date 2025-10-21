@@ -1,8 +1,10 @@
 from PyQt6.QtWidgets import (
-    QWidget, QFrame, QVBoxLayout, QLabel, QPushButton, QSizePolicy
+    QWidget, QFrame, QVBoxLayout, QLabel, QPushButton, QSizePolicy, QHBoxLayout, QMessageBox
 )
 from PyQt6.QtCore import Qt, QPropertyAnimation, QEasingCurve, QPoint
-from PyQt6.QtGui import QColor
+from PyQt6.QtGui import QFont
+import os
+from visual import PredictingWidget
 
 class DataCard(QWidget):
     """
@@ -155,3 +157,112 @@ class DataCard(QWidget):
 
         self._pos_anim = pos_anim
         return super().leaveEvent(event)
+
+
+class RecentDataPopup(QWidget):
+    def __init__(self, data, on_view=None, on_remove=None, refresh_callback=None):
+        super().__init__()
+        self.data = data
+        self.on_view = on_view
+        self.on_remove = on_remove
+        self.refresh_callback = refresh_callback
+
+        # === Window setup ===
+        self.setWindowFlags(
+            Qt.WindowType.FramelessWindowHint | Qt.WindowType.Dialog
+        )
+        self.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground)
+        self.setWindowModality(Qt.WindowModality.ApplicationModal)
+        self.setFixedSize(440, 250)
+
+        # === Main Layout ===
+        layout = QVBoxLayout(self)
+        layout.setContentsMargins(25, 25, 25, 25)
+        layout.setSpacing(14)
+
+        # === Gradient background ===
+        self.setStyleSheet("""
+            background-color: qconicalgradient(
+                cx:1, cy:0, angle:0,
+                stop:0 rgba(140, 144, 255, 255),
+                stop:0.994444 rgba(255, 255, 255, 255)
+            );
+            QWidget {
+                border-radius: 20px;
+                font: 14pt "Arial";
+                color: black;
+            }
+            QPushButton {
+                border-radius: 10px;
+                padding: 6px 14px;
+                font-size: 12pt;
+                background-color: rgba(255,255,255,0.6);
+                color: black;
+                border: 1px solid rgba(0,0,0,0.15);
+            }
+            QPushButton:hover {
+                background-color: rgba(255,255,255,0.85);
+            }
+        """)
+
+        # === Labels ===
+        name_label = QLabel(f"Name: {data.get('name', 'Unknown')}")
+        name_label.setFont(QFont("Arial", 16, QFont.Weight.Bold))
+
+        date_label = QLabel(f"Date Created: {data.get('date', 'N/A')}")
+        course_label = QLabel(
+            f"Specialized Course: {data.get('specialized_course', 'N/A')} "
+            f"({data.get('specialized_course_pct', 0)}%)"
+        )
+        job_label = QLabel(
+            f"Specialized Job: {data.get('specialized_job', 'N/A')} "
+            f"({data.get('specialized_job_pct', 0)}%)"
+        )
+
+        # Add labels
+        layout.addWidget(name_label)
+        layout.addWidget(date_label)
+        layout.addWidget(course_label)
+        layout.addWidget(job_label)
+        layout.addStretch()
+
+        # === Buttons ===
+        btn_layout = QHBoxLayout()
+        btn_layout.setSpacing(12)
+
+        view_btn = QPushButton("View Data")
+        remove_btn = QPushButton("Remove Data")
+        cancel_btn = QPushButton("Cancel")
+
+        btn_layout.addWidget(view_btn)
+        btn_layout.addWidget(remove_btn)
+        btn_layout.addWidget(cancel_btn)
+        layout.addLayout(btn_layout)
+
+        # === Actions ===
+        view_btn.clicked.connect(self.view_data)
+        remove_btn.clicked.connect(self.remove_data)
+        cancel_btn.clicked.connect(self.close)
+
+    def view_data(self):
+        file_path = self.data.get("file_path")
+
+        if self.on_view:
+            self.on_view(self.data, file_path)  
+        self.close()
+
+
+    def remove_data(self):
+        """Remove the file and refresh dashboard"""
+        try:
+            file_path = self.data.get("file_path")
+            if file_path and os.path.exists(file_path):
+                os.remove(file_path)
+                print(f"[OK] Deleted {file_path}")
+                QMessageBox.information(self, "Removed", "Data file removed successfully.")
+
+            else:
+                QMessageBox.warning(self, "Error", "File not found.")
+        except Exception as e:
+            QMessageBox.critical(self, "Error", f"Failed to delete file: {e}")
+        self.close()
