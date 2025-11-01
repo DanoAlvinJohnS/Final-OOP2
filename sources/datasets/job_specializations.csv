@@ -1,0 +1,356 @@
+specialization,job,type,code_or_trait,weight
+Artificial Intelligence & Data,Data Scientist,course,MATH019A,0.12
+Artificial Intelligence & Data,Data Scientist,course,MATH013,0.10
+Artificial Intelligence & Data,Data Scientist,course,MATH020,0.08
+Artificial Intelligence & Data,Data Scientist,course,MATH010,0.08
+Artificial Intelligence & Data,Data Scientist,course,CPE011,0.10
+Artificial Intelligence & Data,Data Scientist,course,CPE010,0.08
+Artificial Intelligence & Data,Data Scientist,course,CPE025,0.07
+Artificial Intelligence & Data,Data Scientist,trait,Analytical Thinking,0.10
+Artificial Intelligence & Data,Data Scientist,trait,Problem-Solving,0.08
+Artificial Intelligence & Data,Data Scientist,trait,Curiosity,0.09
+Artificial Intelligence & Data,Data Scientist,trait,Attention to Detail,0.10
+
+Artificial Intelligence & Data,Machine Learning Engineer,course,MATH019A,0.10
+Artificial Intelligence & Data,Machine Learning Engineer,course,MATH013,0.10
+Artificial Intelligence & Data,Machine Learning Engineer,course,MATH020,0.10
+Artificial Intelligence & Data,Machine Learning Engineer,course,MATH010,0.08
+Artificial Intelligence & Data,Machine Learning Engineer,course,CPE011,0.08
+Artificial Intelligence & Data,Machine Learning Engineer,course,CPE025,0.08
+Artificial Intelligence & Data,Machine Learning Engineer,course,CPE010,0.08
+Artificial Intelligence & Data,Machine Learning Engineer,course,CPE027,0.05
+Artificial Intelligence & Data,Machine Learning Engineer,trait,Problem-Solving,0.10
+Artificial Intelligence & Data,Machine Learning Engineer,trait,Analytical Thinking,0.08
+Artificial Intelligence & Data,Machine Learning Engineer,trait,Innovation,0.05
+Artificial Intelligence & Data,Machine Learning Engineer,trait,Mathematical Aptitude,0.10
+
+Artificial Intelligence & Data,Business Intelligence Analyst,course,MATH019A,0.12
+Artificial Intelligence & Data,Business Intelligence Analyst,course,MATH020,0.10
+Artificial Intelligence & Data,Business Intelligence Analyst,course,CPE011,0.10
+Artificial Intelligence & Data,Business Intelligence Analyst,course,EECO001,0.08
+Artificial Intelligence & Data,Business Intelligence Analyst,course,CPE010,0.08
+Artificial Intelligence & Data,Business Intelligence Analyst,course,CPE025,0.08
+Artificial Intelligence & Data,Business Intelligence Analyst,trait,Analytical Thinking,0.10
+Artificial Intelligence & Data,Business Intelligence Analyst,trait,Communication,0.08
+Artificial Intelligence & Data,Business Intelligence Analyst,trait,Decision-Making,0.08
+Artificial Intelligence & Data,Business Intelligence Analyst,trait,Attention to Detail,0.08
+
+Artificial Intelligence & Data,AI Researcher,course,MATH019A,0.10
+Artificial Intelligence & Data,AI Researcher,course,MATH013,0.10
+Artificial Intelligence & Data,AI Researcher,course,MATH010,0.10
+Artificial Intelligence & Data,AI Researcher,course,MATH020,0.10
+Artificial Intelligence & Data,AI Researcher,course,CPE011,0.08
+Artificial Intelligence & Data,AI Researcher,course,CPE010,0.08
+Artificial Intelligence & Data,AI Researcher,course,CPE027,0.05
+Artificial Intelligence & Data,AI Researcher,trait,Innovation,0.10
+Artificial Intelligence & Data,AI Researcher,trait,Analytical Thinking,0.10
+Artificial Intelligence & Data,AI Researcher,trait,Curiosity,0.09
+Artificial Intelligence & Data,AI Researcher,trait,Problem-Solving,0.10
+
+Artificial Intelligence & Data,Data Engineer,course,MATH019A,0.10
+Artificial Intelligence & Data,Data Engineer,course,MATH013,0.08
+Artificial Intelligence & Data,Data Engineer,course,MATH020,0.08
+Artificial Intelligence & Data,Data Engineer,course,CPE011,0.10
+Artificial Intelligence & Data,Data Engineer,course,CPE010,0.10
+Artificial Intelligence & Data,Data Engineer,course,CPE025,0.08
+Artificial Intelligence & Data,Data Engineer,course,CPE022,0.05
+Artificial Intelligence & Data,Data Engineer,trait,Attention to Detail,0.10
+Artificial Intelligence & Data,Data Engineer,trait,Analytical Thinking,0.08
+Artificial Intelligence & Data,Data Engineer,trait,Problem-Solving,0.10
+Artificial Intelligence & Data,Data Engineer,trait,Adaptability,0.08
+
+Artificial Intelligence & Data,Computer Vision Specialist,course,MATH019A,0.10
+Artificial Intelligence & Data,Computer Vision Specialist,course,MATH013,0.10
+Artificial Intelligence & Data,Computer Vision Specialist,course,MATH020,0.08
+Artificial Intelligence & Data,Computer Vision Specialist,course,CPE027,0.10
+Artificial Intelligence & Data,Computer Vision Specialist,course,CPE025,0.10
+Artificial Intelligence & Data,Computer Vision Specialist,course,CPE010,0.08
+Artificial Intelligence & Data,Computer Vision Specialist,course,CPE011,0.07
+Artificial Intelligence & Data,Computer Vision Specialist,trait,Problem-Solving,0.10
+Artificial Intelligence & Data,Computer Vision Specialist,trait,Innovation,0.08
+Artificial Intelligence & Data,Computer Vision Specialist,trait,Creativity,0.07
+Artificial Intelligence & Data,Computer Vision Specialist,trait,Attention to Detail,0.12
+Engineering Tools & Drafting,CAD Designer,skill,CPE_003,0.93
+Engineering Tools & Drafting,CAD Designer,skill,3D_modeling,0.91
+Engineering Tools & Drafting,CAD Designer,skill,technical_drawing,0.90
+Engineering Tools & Drafting,CAD Designer,skill,autocad_proficiency,0.89
+Engineering Tools & Drafting,trait,attention_to_detail,0.87
+Engineering Tools & Drafting,trait,spatial_intelligence,0.86
+
+Engineering Tools & Drafting,Product Design Engineer,skill,CPE_304,0.93
+Engineering Tools & Drafting,Product Design Engineer,skill,prototype_design,0.91
+Engineering Tools & Drafting,Product Design Engineer,skill,mechanical_concepts,0.90
+Engineering Tools & Drafting,Product Design Engineer,skill,design_validation,0.89
+Engineering Tools & Drafting,trait,creativity,0.87
+Engineering Tools & Drafting,trait,critical_thinking,0.86
+
+Engineering Tools & Drafting,Technical Illustrator,skill,CPE_003,0.92
+Engineering Tools & Drafting,Technical Illustrator,skill,blueprint_creation,0.90
+Engineering Tools & Drafting,Technical Illustrator,skill,rendering,0.89
+Engineering Tools & Drafting,Technical Illustrator,skill,diagram_annotation,0.88
+Engineering Tools & Drafting,trait,clarity_in_communication,0.87
+Engineering Tools & Drafting,trait,organization,0.85
+
+Engineering Tools & Drafting,Design Validation Engineer,skill,CPE_027,0.92
+Engineering Tools & Drafting,Design Validation Engineer,skill,testing_procedures,0.90
+Engineering Tools & Drafting,Design Validation Engineer,skill,hardware_simulation,0.89
+Engineering Tools & Drafting,Design Validation Engineer,skill,component_analysis,0.88
+Engineering Tools & Drafting,trait,accuracy,0.87
+Engineering Tools & Drafting,trait,problem_solving,0.86
+
+Engineering Tools & Drafting,Electronics Engineer,skill,CPE_013,0.91
+Engineering Tools & Drafting,Electronics Engineer,skill,circuit_layout,0.90
+Engineering Tools & Drafting,Electronics Engineer,skill,schematic_design,0.89
+Engineering Tools & Drafting,Electronics Engineer,skill,board_routing,0.88
+Engineering Tools & Drafting,trait,precision,0.87
+Engineering Tools & Drafting,trait,focus,0.85
+
+Hardware & Embedded Systems,Embedded Systems Engineer,course,CPE013,0.10
+Hardware & Embedded Systems,Embedded Systems Engineer,course,CPE014,0.15
+Hardware & Embedded Systems,Embedded Systems Engineer,course,CPE016,0.10
+Hardware & Embedded Systems,Embedded Systems Engineer,course,CPE017,0.10
+Hardware & Embedded Systems,Embedded Systems Engineer,course,CPE006,0.10
+Hardware & Embedded Systems,Embedded Systems Engineer,course,CPE021,0.10
+Hardware & Embedded Systems,Embedded Systems Engineer,course,CPE010,0.08
+Hardware & Embedded Systems,Embedded Systems Engineer,trait,Problem-Solving,0.10
+Hardware & Embedded Systems,Embedded Systems Engineer,trait,Attention to Detail,0.07
+Hardware & Embedded Systems,Embedded Systems Engineer,trait,Hardware Knowledge,0.10
+
+Hardware & Embedded Systems,Firmware Developer,course,CPE014,0.15
+Hardware & Embedded Systems,Firmware Developer,course,CPE016,0.10
+Hardware & Embedded Systems,Firmware Developer,course,CPE006,0.10
+Hardware & Embedded Systems,Firmware Developer,course,CPE021,0.08
+Hardware & Embedded Systems,Firmware Developer,course,CPE013,0.08
+Hardware & Embedded Systems,Firmware Developer,course,CPE017,0.08
+Hardware & Embedded Systems,Firmware Developer,course,CPE010,0.08
+Hardware & Embedded Systems,Firmware Developer,trait,Attention to Detail,0.08
+Hardware & Embedded Systems,Firmware Developer,trait,Hardware Knowledge,0.10
+Hardware & Embedded Systems,Firmware Developer,trait,Problem-Solving,0.05
+
+Hardware & Embedded Systems,IoT Engineer,course,CPE014,0.12
+Hardware & Embedded Systems,IoT Engineer,course,CPE016,0.10
+Hardware & Embedded Systems,IoT Engineer,course,CPE006,0.10
+Hardware & Embedded Systems,IoT Engineer,course,CPE017,0.08
+Hardware & Embedded Systems,IoT Engineer,course,CPE021,0.08
+Hardware & Embedded Systems,IoT Engineer,course,CPE010,0.08
+Hardware & Embedded Systems,IoT Engineer,trait,Creativity,0.08
+Hardware & Embedded Systems,IoT Engineer,trait,Innovation,0.08
+Hardware & Embedded Systems,IoT Engineer,trait,Problem-Solving,0.10
+Hardware & Embedded Systems,IoT Engineer,trait,Hardware Knowledge,0.08
+
+Hardware & Embedded Systems,Hardware Design Engineer,course,CPE013,0.12
+Hardware & Embedded Systems,Hardware Design Engineer,course,CPE016,0.12
+Hardware & Embedded Systems,Hardware Design Engineer,course,CPE006,0.10
+Hardware & Embedded Systems,Hardware Design Engineer,course,CPE021,0.10
+Hardware & Embedded Systems,Hardware Design Engineer,course,CPE017,0.08
+Hardware & Embedded Systems,Hardware Design Engineer,trait,Attention to Detail,0.10
+Hardware & Embedded Systems,Hardware Design Engineer,trait,Hardware Knowledge,0.10
+Hardware & Embedded Systems,Hardware Design Engineer,trait,Problem-Solving,0.08
+Hardware & Embedded Systems,Hardware Design Engineer,trait,Analytical Thinking,0.10
+Hardware & Embedded Systems,Hardware Design Engineer,trait,Creativity,0.10
+
+Hardware & Embedded Systems,ASIC/FPGA Engineer,course,CPE016,0.15
+Hardware & Embedded Systems,ASIC/FPGA Engineer,course,CPE013,0.10
+Hardware & Embedded Systems,ASIC/FPGA Engineer,course,CPE006,0.10
+Hardware & Embedded Systems,ASIC/FPGA Engineer,course,CPE021,0.10
+Hardware & Embedded Systems,ASIC/FPGA Engineer,course,MATH013,0.05
+Hardware & Embedded Systems,ASIC/FPGA Engineer,course,MATH020,0.05
+Hardware & Embedded Systems,ASIC/FPGA Engineer,trait,Problem-Solving,0.10
+Hardware & Embedded Systems,ASIC/FPGA Engineer,trait,Analytical Thinking,0.10
+Hardware & Embedded Systems,ASIC/FPGA Engineer,trait,Attention to Detail,0.10
+Hardware & Embedded Systems,ASIC/FPGA Engineer,trait,Hardware Knowledge,0.05
+
+Hardware & Embedded Systems,Sensor Integration Specialist,course,CPE017,0.15
+Hardware & Embedded Systems,Sensor Integration Specialist,course,CPE014,0.10
+Hardware & Embedded Systems,Sensor Integration Specialist,course,CPE006,0.10
+Hardware & Embedded Systems,Sensor Integration Specialist,course,CPE021,0.08
+Hardware & Embedded Systems,Sensor Integration Specialist,course,CPE010,0.08
+Hardware & Embedded Systems,Sensor Integration Specialist,trait,Hardware Knowledge,0.10
+Hardware & Embedded Systems,Sensor Integration Specialist,trait,Problem-Solving,0.10
+Hardware & Embedded Systems,Sensor Integration Specialist,trait,Attention to Detail,0.08
+Hardware & Embedded Systems,Sensor Integration Specialist,trait,Creativity,0.06
+Hardware & Embedded Systems,Sensor Integration Specialist,trait,Analytical Thinking,0.05
+
+Industry & Field Work,Field Service Engineer,skill,CPE_201A,0.92
+Industry & Field Work,Field Service Engineer,skill,system_troubleshooting,0.91
+Industry & Field Work,Field Service Engineer,skill,hardware_maintenance,0.90
+Industry & Field Work,Field Service Engineer,skill,network_setup,0.89
+Industry & Field Work,trait,adaptability,0.88
+Industry & Field Work,trait,problem_solving,0.87
+
+Industry & Field Work,Industrial Automation Specialist,skill,CPE_014,0.93
+Industry & Field Work,Industrial Automation Specialist,skill,CPE_013,0.91
+Industry & Field Work,Industrial Automation Specialist,skill,process_control,0.90
+Industry & Field Work,Industrial Automation Specialist,skill,PLC_programming,0.89
+Industry & Field Work,trait,analytical_thinking,0.88
+Industry & Field Work,trait,innovation,0.86
+
+Industry & Field Work,Quality Assurance Engineer,skill,CPE_027,0.92
+Industry & Field Work,Quality Assurance Engineer,skill,data_analysis,0.90
+Industry & Field Work,Quality Assurance Engineer,skill,software_testing,0.89
+Industry & Field Work,Quality Assurance Engineer,skill,documentation,0.88
+Industry & Field Work,trait,attention_to_detail,0.87
+Industry & Field Work,trait,consistency,0.85
+
+Industry & Field Work,Process Engineer,skill,MATH_019A,0.91
+Industry & Field Work,Process Engineer,skill,process_modeling,0.90
+Industry & Field Work,Process Engineer,skill,system_optimization,0.89
+Industry & Field Work,Process Engineer,skill,control_systems,0.88
+Industry & Field Work,trait,analytical_mindset,0.87
+Industry & Field Work,trait,efficiency,0.86
+
+Industry & Field Work,Graduate Trainee (Engineering),skill,TECH_101,0.92
+Industry & Field Work,Graduate Trainee (Engineering),skill,EECO_001,0.90
+Industry & Field Work,Graduate Trainee (Engineering),skill,CPE_008,0.88
+Industry & Field Work,Graduate Trainee (Engineering),skill,CPE_010,0.87
+Industry & Field Work,trait,learning_agility,0.89
+Industry & Field Work,trait,teamwork,0.87
+
+Industry & Field Work,Maintenance Engineer,skill,CPE_201A,0.92
+Industry & Field Work,Maintenance Engineer,skill,EE_041,0.91
+Industry & Field Work,Maintenance Engineer,skill,CPE_014,0.89
+Industry & Field Work,Maintenance Engineer,skill,preventive_maintenance,0.88
+Industry & Field Work,trait,responsibility,0.87
+Industry & Field Work,trait,time_management,0.86
+Networking & Cybersecurity,Network Administrator,skill,CPE_020,0.95
+Networking & Cybersecurity,Network Administrator,skill,LAN_WAN_configuration,0.93
+Networking & Cybersecurity,Network Administrator,skill,router_switch_setup,0.91
+Networking & Cybersecurity,Network Administrator,skill,network_monitoring_tools,0.90
+Networking & Cybersecurity,Network Administrator,trait,documentation,0.85
+Networking & Cybersecurity,Network Administrator,trait,network_security_ethics,0.87
+
+Networking & Cybersecurity,Network Engineer,skill,packet_analysis,0.92
+Networking & Cybersecurity,Network Engineer,skill,firewall_configuration,0.90
+Networking & Cybersecurity,Network Engineer,skill,VPN_configuration,0.89
+Networking & Cybersecurity,Network Engineer,skill,vulnerability_scanning,0.88
+Networking & Cybersecurity,Network Engineer,trait,attention_to_detail,0.86
+Networking & Cybersecurity,Network Engineer,trait,systematic_thinking,0.84
+
+Networking & Cybersecurity,Cybersecurity Analyst,skill,penetration_testing,0.94
+Networking & Cybersecurity,Cybersecurity Analyst,skill,threat_detection,0.93
+Networking & Cybersecurity,Cybersecurity Analyst,skill,incident_response,0.92
+Networking & Cybersecurity,Cybersecurity Analyst,skill,data_privacy_compliance,0.90
+Networking & Cybersecurity,Cybersecurity Analyst,trait,ethical_judgment,0.89
+Networking & Cybersecurity,Cybersecurity Analyst,trait,adaptability,0.85
+
+Networking & Cybersecurity,IT Support Specialist,skill,system_maintenance,0.88
+Networking & Cybersecurity,IT Support Specialist,skill,remote_troubleshooting,0.86
+Networking & Cybersecurity,IT Support Specialist,skill,hardware_network_setup,0.85
+Networking & Cybersecurity,IT Support Specialist,trait,problem_diagnosis,0.87
+Networking & Cybersecurity,IT Support Specialist,trait,communication_skills,0.84
+Networking & Cybersecurity,IT Support Specialist,trait,user_assistance_patience,0.83
+
+Networking & Cybersecurity,Security Engineer,skill,firewall_policy_design,0.91
+Networking & Cybersecurity,Security Engineer,skill,IDS_IPS_configuration,0.90
+Networking & Cybersecurity,Security Engineer,skill,encryption_standards,0.89
+Networking & Cybersecurity,Security Engineer,skill,system_hardening,0.88
+Networking & Cybersecurity,Security Engineer,trait,confidentiality,0.87
+Networking & Cybersecurity,Security Engineer,trait,risk_assessment,0.86
+
+Networking & Cybersecurity,Network Operations Center (NOC) Technician,skill,network_diagnostics,0.89
+Networking & Cybersecurity,Network Operations Center (NOC) Technician,skill,uptime_monitoring,0.88
+Networking & Cybersecurity,Network Operations Center (NOC) Technician,skill,troubleshooting_logs,0.87
+Networking & Cybersecurity,Network Operations Center (NOC) Technician,trait,attention_to_detail,0.86
+Networking & Cybersecurity,Network Operations Center (NOC) Technician,trait,time_management,0.85
+Networking & Cybersecurity,Network Operations Center (NOC) Technician,trait,alertness,0.84
+
+Electronics & Signal Processing,Electronics Engineer,skill,CPE_013,0.94
+Electronics & Signal Processing,Electronics Engineer,skill,CPE_017,0.91
+Electronics & Signal Processing,Electronics Engineer,skill,CPE_021,0.90
+Electronics & Signal Processing,skill,analog_circuit_design,0.89
+Electronics & Signal Processing,skill,digital_circuit_analysis,0.88
+Electronics & Signal Processing,trait,precision,0.87
+Electronics & Signal Processing,trait,systematic_thinking,0.85
+
+Electronics & Signal Processing,Signal Processing Engineer,skill,CPE_018,0.92
+Electronics & Signal Processing,Signal Processing Engineer,skill,signal_filtering,0.91
+Electronics & Signal Processing,Signal Processing Engineer,skill,frequency_analysis,0.90
+Electronics & Signal Processing,Signal Processing Engineer,skill,data_acquisition_systems,0.89
+Electronics & Signal Processing,trait,analytical_thinking,0.88
+Electronics & Signal Processing,trait,problem_solving,0.86
+
+Electronics & Signal Processing,Control Systems Engineer,skill,CPE_019,0.93
+Electronics & Signal Processing,Control Systems Engineer,skill,PID_tuning,0.91
+Electronics & Signal Processing,Control Systems Engineer,skill,simulation_tools,0.90
+Electronics & Signal Processing,Control Systems Engineer,skill,automation_integration,0.88
+Electronics & Signal Processing,trait,logical_reasoning,0.87
+Electronics & Signal Processing,trait,patience,0.85
+
+Electronics & Signal Processing,Instrumentation Engineer,skill,sensor_integration,0.91
+Electronics & Signal Processing,Instrumentation Engineer,skill,measurement_systems,0.90
+Electronics & Signal Processing,Instrumentation Engineer,skill,data_calibration,0.89
+Electronics & Signal Processing,Instrumentation Engineer,skill,control_panel_design,0.88
+Electronics & Signal Processing,trait,accuracy,0.87
+Electronics & Signal Processing,trait,documentation,0.86
+
+Electronics & Signal Processing,Design Validation Engineer,skill,PCB_testing,0.90
+Electronics & Signal Processing,Design Validation Engineer,skill,debugging_instruments,0.89
+Electronics & Signal Processing,Design Validation Engineer,skill,compliance_testing,0.88
+Electronics & Signal Processing,Design Validation Engineer,skill,schematic_verification,0.87
+Electronics & Signal Processing,trait,attention_to_detail,0.86
+Electronics & Signal Processing,trait,quality_control_mindset,0.85
+
+Electronics & Signal Processing,Product Design Engineer,skill,CPE_012,0.92
+Electronics & Signal Processing,Product Design Engineer,skill,3D_modeling,0.91
+Electronics & Signal Processing,Product Design Engineer,skill,prototype_testing,0.90
+Electronics & Signal Processing,Product Design Engineer,skill,circuit_optimization,0.89
+Electronics & Signal Processing,trait,creativity,0.88
+Electronics & Signal Processing,trait,collaboration,0.86
+
+Software & Programming,Software Developer,course,CPE 007,0.10
+Software & Programming,Software Developer,course,CPE 009,0.15
+Software & Programming,Software Developer,course,CPE 010,0.15
+Software & Programming,Software Developer,course,CPE 011,0.10
+Software & Programming,Software Developer,course,CPE 025,0.10
+Software & Programming,Software Developer,course,MATH 006,0.05
+Software & Programming,Software Developer,trait,Analytical Thinking,0.15
+Software & Programming,Software Developer,trait,Problem Solving,0.10
+Software & Programming,Software Developer,trait,Adaptability,0.10
+
+Software & Programming,Full Stack Engineer,course,CPE 009,0.15
+Software & Programming,Full Stack Engineer,course,CPE 010,0.10
+Software & Programming,Full Stack Engineer,course,CPE 011,0.10
+Software & Programming,Full Stack Engineer,course,CPE 025,0.10
+Software & Programming,Full Stack Engineer,course,CPE 021,0.10
+Software & Programming,Full Stack Engineer,course,CPE 022,0.10
+Software & Programming,Full Stack Engineer,trait,Analytical Thinking,0.10
+Software & Programming,Full Stack Engineer,trait,Creativity,0.10
+Software & Programming,Full Stack Engineer,trait,Teamwork,0.15
+
+Software & Programming,Mobile App Developer,course,CPE 009,0.15
+Software & Programming,Mobile App Developer,course,CPE 010,0.15
+Software & Programming,Mobile App Developer,course,CPE 025,0.10
+Software & Programming,Mobile App Developer,course,CPE 028,0.10
+Software & Programming,Mobile App Developer,course,CPE 021,0.10
+Software & Programming,Mobile App Developer,trait,Creativity,0.15
+Software & Programming,Mobile App Developer,trait,Analytical Thinking,0.10
+Software & Programming,Mobile App Developer,trait,User Focus,0.15
+
+Software & Programming,Game Developer,course,CPE 009,0.15
+Software & Programming,Game Developer,course,CPE 010,0.10
+Software & Programming,Game Developer,course,CPE 025,0.10
+Software & Programming,Game Developer,course,CPE 028,0.10
+Software & Programming,Game Developer,course,MATH 013,0.10
+Software & Programming,Game Developer,trait,Creativity,0.20
+Software & Programming,Game Developer,trait,Problem Solving,0.15
+Software & Programming,Game Developer,trait,Perseverance,0.10
+
+Software & Programming,Web Developer,course,CPE 009,0.15
+Software & Programming,Web Developer,course,CPE 010,0.10
+Software & Programming,Web Developer,course,CPE 011,0.15
+Software & Programming,Web Developer,course,CPE 025,0.10
+Software & Programming,Web Developer,course,CPE 028,0.10
+Software & Programming,Web Developer,trait,Creativity,0.10
+Software & Programming,Web Developer,trait,Analytical Thinking,0.10
+Software & Programming,Web Developer,trait,Teamwork,0.10
+Software & Programming,Web Developer,trait,Communication,0.10
+
+Software & Programming,DevOps Engineer,course,CPE 021,0.10
+Software & Programming,DevOps Engineer,course,CPE 022,0.15
+Software & Programming,DevOps Engineer,course,CPE 025,0.10
+Software & Programming,DevOps Engineer,course,CPE 010,0.10
+Software & Programming,DevOps Engineer,course,CPE 018,0.10
+Software & Programming,DevOps Engineer,trait,Problem Solving,0.10
+Software & Programming,DevOps Engineer,trait,Adaptability,0.10
+Software & Programming,DevOps Engineer,trait,Teamwork,0.10
+Software & Programming,DevOps Engineer,trait,Organization,0.15

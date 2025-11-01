@@ -5,6 +5,7 @@ from PyQt6.QtWidgets import (
 )
 from PyQt6.QtWebEngineWidgets import QWebEngineView
 
+
 class PredictingWidget(QWidget):
     def __init__(self, file_path=None):
         super().__init__()
@@ -18,18 +19,22 @@ class PredictingWidget(QWidget):
         # === Top controls layout ===
         control_layout = QHBoxLayout()
 
+        # --- Specialization dropdown ---
         self.specialization_dropdown = QComboBox()
         self.specialization_dropdown.addItem("All Specializations")
         self.specialization_dropdown.currentIndexChanged.connect(self.update_chart)
         control_layout.addWidget(QLabel("Specialization:"))
         control_layout.addWidget(self.specialization_dropdown)
 
+        # --- Job view dropdown (Top 5 default, All Jobs last) ---
         self.job_dropdown = QComboBox()
-        self.job_dropdown.addItems(["All Jobs", "Top 5 Jobs", "Top 10 Jobs"])
+        self.job_dropdown.addItems(["Top 5 Jobs", "Top 10 Jobs", "All Jobs"])
+        self.job_dropdown.setCurrentIndex(0)  # Default: Top 5 Jobs
         self.job_dropdown.currentIndexChanged.connect(self.update_chart)
         control_layout.addWidget(QLabel("View:"))
         control_layout.addWidget(self.job_dropdown)
 
+        # --- Chart type dropdown ---
         self.chart_type_dropdown = QComboBox()
         self.chart_type_dropdown.addItems(["Pie Chart", "Bar Chart"])
         self.chart_type_dropdown.currentIndexChanged.connect(self.update_chart)
@@ -38,6 +43,7 @@ class PredictingWidget(QWidget):
 
         control_layout.addStretch()
 
+        # --- Chart display ---
         self.browser = QWebEngineView()
         self.browser.setMinimumHeight(500)
 
@@ -47,6 +53,7 @@ class PredictingWidget(QWidget):
 
         self.setLayout(grid)
 
+        # === Data initialization ===
         self.df = None
         if file_path:
             self.load_data(file_path)

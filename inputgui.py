@@ -41,7 +41,6 @@ class IntroWindow(QDialog):
 
         self.setLayout(layout)
 
-        # Connect
         self.btn_generate.clicked.connect(self.handle_generate)
         self.btn_input.clicked.connect(self.handle_input)
         self.btn_cancel.clicked.connect(self.close)

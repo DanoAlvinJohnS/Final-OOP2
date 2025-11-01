@@ -149,6 +149,14 @@ class DataCard(QWidget):
         return super().leaveEvent(event)
 
 
+from PyQt6.QtWidgets import (
+    QWidget, QVBoxLayout, QLabel, QPushButton, QHBoxLayout, QMessageBox, QGraphicsDropShadowEffect
+)
+from PyQt6.QtCore import Qt
+from PyQt6.QtGui import QFont, QColor
+import os
+
+
 class RecentDataPopup(QWidget):
     def __init__(self, data, on_view=None, on_remove=None, refresh_callback=None):
         super().__init__()
@@ -163,25 +171,46 @@ class RecentDataPopup(QWidget):
         )
         self.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground)
         self.setWindowModality(Qt.WindowModality.ApplicationModal)
-        self.setFixedSize(440, 250)
+        self.setFixedSize(460, 270)
 
-        # === Main Layout ===
-        layout = QVBoxLayout(self)
+        # === Outer layout (transparent root) ===
+        outer_layout = QVBoxLayout(self)
+        outer_layout.setContentsMargins(0, 0, 0, 0)
+
+        # === Main content container ===
+        self.background_frame = QWidget(self)
+        self.background_frame.setObjectName("background_frame")
+
+        # subtle drop shadow for floating effect
+        shadow = QGraphicsDropShadowEffect(self)
+        shadow.setBlurRadius(40)
+        shadow.setXOffset(0)
+        shadow.setYOffset(8)
+        shadow.setColor(QColor(0, 0, 0, 80))
+        self.background_frame.setGraphicsEffect(shadow)
+
+        # === Internal content layout ===
+        layout = QVBoxLayout(self.background_frame)
         layout.setContentsMargins(25, 25, 25, 25)
         layout.setSpacing(14)
 
+        # === STYLES ===
         self.setStyleSheet("""
-            QWidget {
-                background: qconicalgradient(
-                    cx:1, cy:0, angle:0,
-                    stop:0 rgba(140, 144, 255, 255),
-                    stop:0.5 rgba(180, 190, 255, 255),
-                    stop:1 rgba(255, 255, 255, 255)
+            QWidget#background_frame {
+                background: qlineargradient(
+                    x1:0, y1:0, x2:1, y2:1,
+                    stop:0 rgba(230, 233, 250, 0.9),
+                    stop:0.5 rgba(200, 210, 255, 0.95),
+                    stop:1 rgba(255, 255, 255, 0.95)
                 );
                 border-radius: 20px;
-                font-family: "Segoe UI", "Arial";
-                font-size: 14pt;
-                color: #1e1e1e;
+                border: 1px solid rgba(255, 255, 255, 0.4);
+            }
+
+            QLabel {
+                color: #111;
+                font-weight: 500;
+                background: transparent;
             }
 
             QPushButton {
@@ -204,18 +233,11 @@ class RecentDataPopup(QWidget):
                 background-color: rgba(230,230,230,0.9);
                 transform: scale(0.97);
             }
-
-            QLabel {
-                color: #111;
-                font-weight: 500;
-            }
         """)
 
         # === Labels ===
         name_label = QLabel(f"Name: {data.get('name', 'Unknown')}")
-        
         date_label = QLabel(f"Date Created: {data.get('date', 'N/A')}")
-
         course_label = QLabel(
             f"Specialized Course: {data.get('specialized_course', 'N/A')} "
             f"({data.get('specialized_course_pct', 0)}%)"
@@ -224,15 +246,11 @@ class RecentDataPopup(QWidget):
             f"Specialized Job: {data.get('specialized_job', 'N/A')} "
             f"({data.get('specialized_job_pct', 0)}%)"
         )
-        date_label.setFont(QFont("Arial", 13, QFont.Weight.Bold))
-        course_label.setFont(QFont("Arial", 13, QFont.Weight.Bold))
-        job_label.setFont(QFont("Arial", 13, QFont.Weight.Bold))
-        name_label.setFont(QFont("Arial", 13, QFont.Weight.Bold))
-        # Add labels
-        layout.addWidget(name_label)
-        layout.addWidget(date_label)
-        layout.addWidget(course_label)
-        layout.addWidget(job_label)
+
+        for lbl in [name_label, date_label, course_label, job_label]:
+            lbl.setFont(QFont("Segoe UI", 12, QFont.Weight.Medium))
+            layout.addWidget(lbl)
+
         layout.addStretch()
 
         # === Buttons ===
@@ -248,6 +266,8 @@ class RecentDataPopup(QWidget):
         btn_layout.addWidget(cancel_btn)
         layout.addLayout(btn_layout)
 
+        outer_layout.addWidget(self.background_frame, alignment=Qt.AlignmentFlag.AlignCenter)
+
         # === Actions ===
         view_btn.clicked.connect(self.view_data)
         remove_btn.clicked.connect(self.remove_data)
@@ -255,11 +275,9 @@ class RecentDataPopup(QWidget):
 
     def view_data(self):
         file_path = self.data.get("file_path")
-
         if self.on_view:
-            self.on_view(self.data, file_path)  
+            self.on_view(self.data, file_path)
         self.close()
-
 
     def remove_data(self):
         try:
@@ -268,18 +286,14 @@ class RecentDataPopup(QWidget):
                 os.remove(file_path)
                 print(f"[OK] Deleted {file_path}")
                 QMessageBox.information(self, "Removed", "Data file removed successfully.")
-                
-                self.refresh_callback()
-                
+                if self.refresh_callback:
+                    self.refresh_callback()
                 if self.on_remove:
                     self.on_remove(self.data)
-                elif self.refresh_callback:
-                    self.refresh_callback()
-
             else:
                 QMessageBox.warning(self, "Error", "File not found.")
         except Exception as e:
             QMessageBox.critical(self, "Error", f"Failed to delete file: {e}")
-        
         self.close()
+
 

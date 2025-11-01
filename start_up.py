@@ -13,6 +13,7 @@ from data_card import RecentDataPopup
 from inputgui import input_window
 from ui_handler.animations import switch_widget, shake_window, PlayfulSplash
 from ui_handler.statistic_handler import load_all_structure
+from ui_handler.system_control import kill_everything, minimize_all, bind_global_shortcuts
 
 
 class CareerExplorer(QMainWindow):
@@ -42,7 +43,24 @@ class CareerExplorer(QMainWindow):
         self.login_widget.reg_btn.clicked.connect(self.show_register)
         self.register_widget.Sign_in.clicked.connect(self.validate)
         self.register_widget.go_back_btn.clicked.connect(self.show_login)
+
+        bind_global_shortcuts(self.dashboard_widget)
+        bind_global_shortcuts(self.login_widget)
+        bind_global_shortcuts(self.register_widget)
         
+        self.dashboard_widget.exit_h.clicked.connect(kill_everything)
+        self.dashboard_widget.min_h.clicked.connect(minimize_all)
+        self.dashboard_widget.exit_r.clicked.connect(kill_everything)
+        self.dashboard_widget.min_r.clicked.connect(minimize_all)
+        self.dashboard_widget.exit_s.clicked.connect(kill_everything)
+        self.dashboard_widget.min_s.clicked.connect(minimize_all)
+
+        self.login_widget.exit_log.clicked.connect(kill_everything)
+        self.login_widget.min_log.clicked.connect(minimize_all)
+        
+        self.register_widget.exit_reg.clicked.connect(kill_everything)
+        self.register_widget.min_reg.clicked.connect(minimize_all)
+
         try:
             self.dashboard_widget.log_out.clicked.connect(self.show_login)
         except Exception:
@@ -53,7 +71,7 @@ class CareerExplorer(QMainWindow):
         self.wrapper_layout.setContentsMargins(0, 0, 0, 0)
         self.wrapper_layout.addWidget(self.container)
         self.setCentralWidget(self.wrapper)
-
+        
         self.overlay = PlayfulSplash(self)
         self.overlay.show()
 
@@ -279,6 +297,7 @@ class CareerExplorer(QMainWindow):
             page = self.dashboard_widget.pageCreate
 
             predicting_container = page.findChild(QWidget, "predicting_widget")
+
             if predicting_container is None:
                 raise AttributeError("[ERROR on UI] | predicting_widget not found in pageCreate")
 

@@ -303,78 +303,6 @@ color: qconicalgradient(cx:0, cy:0.5, angle:269.2, stop:0.0222222 rgba(79, 86, 2
     <string>None of this is real so feel free to put anything.</string>
    </property>
   </widget>
-  <widget class="QWidget" name="shadow_elements" native="true">
-   <property name="geometry">
-    <rect>
-     <x>709</x>
-     <y>-1</y>
-     <width>781</width>
-     <height>751</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: qconicalgradient(cx:0, cy:0.5, angle:269.2, stop:0.0222222 rgba(79, 86, 255, 255), stop:1 rgba(255, 255, 255, 255));</string>
-   </property>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>660</y>
-      <width>111</width>
-      <height>461</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">
-background-color: qconicalgradient(cx:0, cy:0.5, angle:269.2, stop:0.0222222 rgba(79, 86, 255, 103), stop:1 rgba(255, 255, 255, 255));</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>660</x>
-      <y>-360</y>
-      <width>111</width>
-      <height>461</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">
-background-color: qconicalgradient(cx:1, cy:0, angle:65.9, stop:0.0222222 rgba(79, 86, 255, 103), stop:1 rgba(255, 255, 255, 255));
-</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="Register_Label_3">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>300</y>
-      <width>751</width>
-      <height>111</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Century Gothic</family>
-      <pointsize>72</pointsize>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">
-color: qconicalgradient(cx:0, cy:0.5, angle:269.2, stop:0.0222222 rgba(79, 86, 255, 255), stop:1 rgba(255, 255, 255, 255));</string>
-    </property>
-    <property name="text">
-     <string>Career Explorer</string>
-    </property>
-   </widget>
-  </widget>
   <widget class="QPushButton" name="Sign_in">
    <property name="geometry">
     <rect>
@@ -435,14 +363,142 @@ QPushButton:pressed {
     </size>
    </property>
   </widget>
+  <widget class="QLabel" name="Register_Label_4">
+   <property name="geometry">
+    <rect>
+     <x>720</x>
+     <y>320</y>
+     <width>771</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>80</pointsize>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+color: qconicalgradient(cx:0, cy:0.5, angle:269.2, stop:0.0222222 rgba(79, 86, 255, 255), stop:1 rgba(255, 255, 255, 255));</string>
+   </property>
+   <property name="text">
+    <string>Career Explorer</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="exit_reg">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>1440</x>
+     <y>10</y>
+     <width>41</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>12</pointsize>
+     <italic>false</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: white;
+    color: black;
+    font: 700 12pt &quot;Arial&quot;;
+    border: transparent;  
+    border-radius: 10px;                      
+    padding: 6px 12px;                      
+}
+
+QPushButton:hover {
+    background-color: rgb(245, 245, 245);
+    border-color: rgb(150, 150, 150);
+}
+
+QPushButton:pressed {
+    background-color: rgb(230, 230, 230);
+    border-color: rgb(120, 120, 120);
+}
+</string>
+   </property>
+   <property name="text">
+    <string>X</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="min_reg">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>1390</x>
+     <y>10</y>
+     <width>41</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>12</pointsize>
+     <italic>false</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: white;
+    color: black;
+    font: 700 12pt &quot;Arial&quot;;
+    border: transparent;  
+    border-radius: 10px;                      
+    padding: 6px 12px;                      
+}
+
+QPushButton:hover {
+    background-color: rgb(245, 245, 245);
+    border-color: rgb(150, 150, 150);
+}
+
+QPushButton:pressed {
+    background-color: rgb(230, 230, 230);
+    border-color: rgb(120, 120, 120);
+}
+</string>
+   </property>
+   <property name="text">
+    <string>-</string>
+   </property>
+  </widget>
   <zorder>label</zorder>
-  <zorder>shadow_elements</zorder>
   <zorder>background</zorder>
   <zorder>verticalLayoutWidget</zorder>
   <zorder>error_message</zorder>
   <zorder>Register_Label</zorder>
   <zorder>Register_Label_2</zorder>
   <zorder>Sign_in</zorder>
+  <zorder>Register_Label_4</zorder>
+  <zorder>exit_reg</zorder>
+  <zorder>min_reg</zorder>
  </widget>
  <resources>
   <include location="../sources/login.qrc"/>

@@ -7,6 +7,4 @@ if __name__ == "__main__":
     window = CareerExplorer()
     window.show()  
     sys.exit(app.exec())     
-   
-def leave(self):
-        QApplication.quit()
+        

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1475</width>
-    <height>702</height>
+    <width>1502</width>
+    <height>710</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -73,10 +73,11 @@ font: 28pt &quot;Calibri&quot;;</string>
        </property>
        <property name="styleSheet">
         <string notr="true">QLabel { background-color: transparent; }
-QPushButton {color: black}</string>
+QPushButton {color: rgb(166, 121, 221);}
+</string>
        </property>
        <property name="currentIndex">
-        <number>2</number>
+        <number>1</number>
        </property>
        <widget class="QWidget" name="pageHome">
         <property name="styleSheet">
@@ -89,8 +90,8 @@ QPushButton {color: black}</string>
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>1271</width>
-           <height>131</height>
+           <width>1281</width>
+           <height>101</height>
           </rect>
          </property>
          <property name="styleSheet">
@@ -98,7 +99,7 @@ QPushButton {color: black}</string>
 border-bottom-left-radius: 30px;
 border-top-right-radius: 0px;
 border-bottom-right-radius: 30px;
-background-color: qconicalgradient(cx:0, cy:0.994318, angle:93.6, stop:0.4 rgba(36, 0, 143, 188), stop:1 rgba(147, 161, 255, 255));
+
 background-color: qconicalgradient(cx:0, cy:0.994318, angle:96.5, stop:0.4 rgba(36, 0, 143, 255), stop:1 rgba(147, 161, 255, 255));</string>
          </property>
          <property name="text">
@@ -108,8 +109,8 @@ background-color: qconicalgradient(cx:0, cy:0.994318, angle:96.5, stop:0.4 rgba(
         <widget class="QLabel" name="user_name">
          <property name="geometry">
           <rect>
-           <x>1070</x>
-           <y>50</y>
+           <x>1080</x>
+           <y>40</y>
            <width>111</width>
            <height>20</height>
           </rect>
@@ -126,12 +127,15 @@ background-color: qconicalgradient(cx:0, cy:0.994318, angle:96.5, stop:0.4 rgba(
          <property name="text">
           <string/>
          </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
         </widget>
         <widget class="QLabel" name="Register_Label_3">
          <property name="geometry">
           <rect>
            <x>30</x>
-           <y>40</y>
+           <y>-30</y>
            <width>751</width>
            <height>111</height>
           </rect>
@@ -155,8 +159,8 @@ color: qconicalgradient(cx:1, cy:0.04, angle:272, stop:0 rgba(255, 255, 255, 255
         <widget class="QPushButton" name="log_out">
          <property name="geometry">
           <rect>
-           <x>1080</x>
-           <y>70</y>
+           <x>1090</x>
+           <y>60</y>
            <width>91</width>
            <height>24</height>
           </rect>
@@ -170,9 +174,13 @@ color: qconicalgradient(cx:1, cy:0.04, angle:272, stop:0 rgba(255, 255, 255, 255
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color:transparent;
+          <string notr="true">background-color: qconicalgradient(cx:0, cy:1, angle:107.2, stop:0.422222 rgba(64, 0, 255, 103), stop:1 rgba(255, 255, 255, 255));
 font: 9pt &quot;Segoe UI&quot;;
-border-color: transparent;</string>
+color: black;
+border-top-left-radius: 5px;
+border-bottom-left-radius: 5px;
+border-top-right-radius: 5px;
+border-bottom-right-radius: 5px;</string>
          </property>
          <property name="text">
           <string>Log out</string>
@@ -231,36 +239,11 @@ background-color: qconicalgradient(cx:1, cy:0, angle:272, stop:0 rgba(140, 144, 
           </layout>
          </widget>
         </widget>
-        <widget class="QLabel" name="Register_Label_5">
-         <property name="geometry">
-          <rect>
-           <x>620</x>
-           <y>150</y>
-           <width>751</width>
-           <height>111</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <family>Century Gothic</family>
-           <pointsize>72</pointsize>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: transparent;
-
-color: qconicalgradient(cx:1, cy:0.04, angle:272, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(255, 255, 255, 255));</string>
-         </property>
-         <property name="text">
-          <string>Career Explorer</string>
-         </property>
-        </widget>
         <widget class="QLabel" name="user_name_2">
          <property name="geometry">
           <rect>
            <x>30</x>
-           <y>0</y>
+           <y>20</y>
            <width>401</width>
            <height>81</height>
           </rect>
@@ -278,6 +261,159 @@ color: qconicalgradient(cx:1, cy:0.04, angle:272, stop:0 rgba(255, 255, 255, 255
           <string>Dashboard</string>
          </property>
         </widget>
+        <widget class="QPushButton" name="go_create">
+         <property name="geometry">
+          <rect>
+           <x>190</x>
+           <y>180</y>
+           <width>311</width>
+           <height>251</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+	background-color: qconicalgradient(cx:0, cy:0, angle:107.2, stop:0 rgba(62, 0, 250, 207), stop:1 rgba(255, 255, 255, 255));
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color: white;
+    font: 700 35pt &quot;Arial Narrow&quot;;
+}
+
+QPushButton:hover {
+	background-color: qconicalgradient(cx:0, cy:0, angle:107.2, stop:0 rgba(62, 0, 250, 103), stop:1 rgba(255, 255, 255, 255));
+
+}
+
+QPushButton:pressed {
+	background-color: qconicalgradient(cx:0, cy:0, angle:107.2, stop:0.422222 rgba(28, 0, 112, 103), stop:1 rgba(255, 255, 255, 255));
+}
+
+</string>
+         </property>
+         <property name="text">
+          <string>Create data</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="go_statistic">
+         <property name="geometry">
+          <rect>
+           <x>760</x>
+           <y>190</y>
+           <width>311</width>
+           <height>251</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: qconicalgradient(cx:1, cy:0, angle:106.7, stop:0 rgba(62, 0, 250, 207), stop:1 rgba(255, 255, 255, 255));
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color: white;
+    font: 700 35pt &quot;Arial Narrow&quot;;
+}
+
+QPushButton:hover {
+	background-color: qconicalgradient(cx:0, cy:0, angle:107.2, stop:0 rgba(62, 0, 250, 103), stop:1 rgba(255, 255, 255, 255));
+
+}
+
+QPushButton:pressed {
+	background-color: qconicalgradient(cx:0, cy:0, angle:107.2, stop:0.422222 rgba(28, 0, 112, 103), stop:1 rgba(255, 255, 255, 255));
+}
+</string>
+         </property>
+         <property name="text">
+          <string>Statistics</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="exit_h">
+         <property name="geometry">
+          <rect>
+           <x>1220</x>
+           <y>10</y>
+           <width>41</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Arial</family>
+           <pointsize>12</pointsize>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: transparent;
+    color: black;
+    font: 700 12pt &quot;Arial&quot;;
+    border: transparent;  
+    border-radius: 10px;                      
+    padding: 6px 12px;                      
+}
+
+QPushButton:hover {
+    background-color: rgb(245, 245, 245);
+    border-color: rgb(150, 150, 150);
+}
+
+QPushButton:pressed {
+    background-color: rgb(230, 230, 230);
+    border-color: rgb(120, 120, 120);
+}
+</string>
+         </property>
+         <property name="text">
+          <string>X</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="min_h">
+         <property name="geometry">
+          <rect>
+           <x>1190</x>
+           <y>10</y>
+           <width>41</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Arial</family>
+           <pointsize>12</pointsize>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: transparent;
+    color: black;
+    font: 700 12pt &quot;Arial&quot;;
+    border: transparent;  
+    border-radius: 10px;                      
+    padding: 6px 12px;                      
+}
+
+QPushButton:hover {
+    background-color: rgb(245, 245, 245);
+    border-color: rgb(150, 150, 150);
+}
+
+QPushButton:pressed {
+    background-color: rgb(230, 230, 230);
+    border-color: rgb(120, 120, 120);
+}
+</string>
+         </property>
+         <property name="text">
+          <string>-</string>
+         </property>
+        </widget>
        </widget>
        <widget class="QWidget" name="pageCreate">
         <property name="styleSheet">
@@ -287,7 +423,7 @@ color: qconicalgradient(cx:1, cy:0.04, angle:272, stop:0 rgba(255, 255, 255, 255
          <property name="geometry">
           <rect>
            <x>-30</x>
-           <y>0</y>
+           <y>-10</y>
            <width>311</width>
            <height>131</height>
           </rect>
@@ -307,7 +443,7 @@ background-color: qconicalgradient(cx:0, cy:0.994318, angle:96.5, stop:0.4 rgba(
          <property name="geometry">
           <rect>
            <x>20</x>
-           <y>0</y>
+           <y>30</y>
            <width>401</width>
            <height>81</height>
           </rect>
@@ -331,7 +467,7 @@ background-color: qconicalgradient(cx:0, cy:0.994318, angle:96.5, stop:0.4 rgba(
          <property name="geometry">
           <rect>
            <x>20</x>
-           <y>40</y>
+           <y>-30</y>
            <width>751</width>
            <height>111</height>
           </rect>
@@ -355,7 +491,7 @@ color: qconicalgradient(cx:1, cy:0.04, angle:272, stop:0 rgba(255, 255, 255, 255
         <widget class="QPushButton" name="generate_data">
          <property name="geometry">
           <rect>
-           <x>-20</x>
+           <x>10</x>
            <y>140</y>
            <width>251</width>
            <height>51</height>
@@ -370,39 +506,37 @@ color: qconicalgradient(cx:1, cy:0.04, angle:272, stop:0 rgba(255, 255, 255, 255
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">
+          <string notr="true">border-top-left-radius: 20px;
 border-top-right-radius: 20px;
+border-bottom-left-radius: 20px;
+border-bottom-right-radius: 20px;
 font: 600 20pt &quot;Segoe UI&quot;;
 color:black;
 background-color:qconicalgradient(cx:1, cy:0, angle:0, stop:0 rgba(140, 144, 255, 255), stop:0.994444 rgba(255, 255, 255, 255))</string>
          </property>
          <property name="text">
-          <string>Create Data   </string>
+          <string>Create Data</string>
          </property>
         </widget>
         <widget class="QWidget" name="predicting_widget" native="true">
          <property name="geometry">
           <rect>
-           <x>310</x>
-           <y>20</y>
-           <width>911</width>
-           <height>631</height>
+           <x>320</x>
+           <y>40</y>
+           <width>881</width>
+           <height>601</height>
           </rect>
          </property>
          <property name="styleSheet">
-          <string notr="true">border-top-left-radius: 80px;
-border-bottom-left-radius: 80px;
-border-top-right-radius: 80px;
-border-bottom-right-radius: 80px;
-color: black;
+          <string notr="true">color:black;
 </string>
          </property>
         </widget>
         <widget class="QPushButton" name="view_graph">
          <property name="geometry">
           <rect>
-           <x>-20</x>
-           <y>200</y>
+           <x>10</x>
+           <y>210</y>
            <width>251</width>
            <height>51</height>
           </rect>
@@ -416,23 +550,109 @@ color: black;
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">
+          <string notr="true">border-top-left-radius: 20px;
 border-top-right-radius: 20px;
+border-bottom-left-radius: 20px;
+border-bottom-right-radius: 20px;
 font: 600 20pt &quot;Segoe UI&quot;;
 color:black;
 background-color:qconicalgradient(cx:1, cy:0, angle:0, stop:0 rgba(140, 144, 255, 255), stop:0.994444 rgba(255, 255, 255, 255))</string>
          </property>
          <property name="text">
-          <string>View Graph    </string>
+          <string>View Graph</string>
          </property>
         </widget>
-        <widget class="QLabel" name="label_2">
+        <widget class="QPushButton" name="exit_r">
+         <property name="geometry">
+          <rect>
+           <x>1220</x>
+           <y>10</y>
+           <width>41</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Arial</family>
+           <pointsize>12</pointsize>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: transparent;
+    color: black;
+    font: 700 12pt &quot;Arial&quot;;
+    border: transparent;  
+    border-radius: 10px;                      
+    padding: 6px 12px;                      
+}
+
+QPushButton:hover {
+    background-color: rgb(245, 245, 245);
+    border-color: rgb(150, 150, 150);
+}
+
+QPushButton:pressed {
+    background-color: rgb(230, 230, 230);
+    border-color: rgb(120, 120, 120);
+}
+</string>
+         </property>
+         <property name="text">
+          <string>X</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="min_r">
+         <property name="geometry">
+          <rect>
+           <x>1190</x>
+           <y>10</y>
+           <width>41</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Arial</family>
+           <pointsize>12</pointsize>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: transparent;
+    color: black;
+    font: 700 12pt &quot;Arial&quot;;
+    border: transparent;  
+    border-radius: 10px;                      
+    padding: 6px 12px;                      
+}
+
+QPushButton:hover {
+    background-color: rgb(245, 245, 245);
+    border-color: rgb(150, 150, 150);
+}
+
+QPushButton:pressed {
+    background-color: rgb(230, 230, 230);
+    border-color: rgb(120, 120, 120);
+}
+</string>
+         </property>
+         <property name="text">
+          <string>-</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_4">
          <property name="geometry">
           <rect>
            <x>300</x>
-           <y>10</y>
-           <width>931</width>
-           <height>651</height>
+           <y>30</y>
+           <width>921</width>
+           <height>621</height>
           </rect>
          </property>
          <property name="styleSheet">
@@ -440,25 +660,23 @@ background-color:qconicalgradient(cx:1, cy:0, angle:0, stop:0 rgba(140, 144, 255
 border-bottom-left-radius: 80px;
 border-top-right-radius: 80px;
 border-bottom-right-radius: 80px;
-
-
-border-width: 5px;
-border-style: solid;
-border-color: qconicalgradient(cx:1, cy:0.017, angle:304.3, stop:0.655556 rgba(0, 31, 50, 255), stop:0.994444 rgba(102, 17, 202, 255));
-
-</string>
+color: black;
+ border: 1px solid rgb(180, 180, 180);
+ border-radius: 40px;                     </string>
          </property>
          <property name="text">
-          <string>TextLabel</string>
+          <string/>
          </property>
         </widget>
-        <zorder>label_2</zorder>
+        <zorder>label_4</zorder>
         <zorder>background1_3</zorder>
         <zorder>user_name_3</zorder>
         <zorder>Register_Label_4</zorder>
         <zorder>generate_data</zorder>
         <zorder>predicting_widget</zorder>
         <zorder>view_graph</zorder>
+        <zorder>exit_r</zorder>
+        <zorder>min_r</zorder>
        </widget>
        <widget class="QWidget" name="pageStatistic">
         <property name="styleSheet">
@@ -467,10 +685,10 @@ border-color: qconicalgradient(cx:1, cy:0.017, angle:304.3, stop:0.655556 rgba(0
         <widget class="QLabel" name="background1_4">
          <property name="geometry">
           <rect>
-           <x>-30</x>
+           <x>-70</x>
            <y>0</y>
            <width>381</width>
-           <height>131</height>
+           <height>121</height>
           </rect>
          </property>
          <property name="styleSheet">
@@ -488,7 +706,7 @@ background-color: qconicalgradient(cx:0, cy:0.994318, angle:96.5, stop:0.4 rgba(
          <property name="geometry">
           <rect>
            <x>20</x>
-           <y>40</y>
+           <y>-30</y>
            <width>751</width>
            <height>111</height>
           </rect>
@@ -513,7 +731,7 @@ color: qconicalgradient(cx:1, cy:0.04, angle:272, stop:0 rgba(255, 255, 255, 255
          <property name="geometry">
           <rect>
            <x>20</x>
-           <y>0</y>
+           <y>30</y>
            <width>401</width>
            <height>81</height>
           </rect>
@@ -533,41 +751,26 @@ color: qconicalgradient(cx:1, cy:0.04, angle:272, stop:0 rgba(255, 255, 255, 255
           <string>Statistics</string>
          </property>
         </widget>
-        <widget class="QLabel" name="holder">
-         <property name="geometry">
-          <rect>
-           <x>400</x>
-           <y>20</y>
-           <width>331</width>
-           <height>61</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color:black;
-font: 600 28pt &quot;Segoe UI&quot;;
-background-color:transparent;</string>
-         </property>
-         <property name="text">
-          <string> Description</string>
-         </property>
-        </widget>
         <widget class="QTreeWidget" name="track_list">
          <property name="geometry">
           <rect>
            <x>30</x>
            <y>160</y>
-           <width>301</width>
-           <height>431</height>
+           <width>251</width>
+           <height>481</height>
           </rect>
          </property>
          <property name="styleSheet">
           <string notr="true">background-color: qconicalgradient(cx:0, cy:1, angle:106.7, stop:0 rgba(99, 216, 255, 255), stop:1 rgba(255, 255, 255, 255));
-font: 700 20pt &quot;Arial&quot;;
+font: 700 13pt &quot;Arial&quot;;
 border-top-left-radius: 30px;
 border-top-right-radius: 30px;
 border-bottom-left-radius: 30px;
 border-bottom-right-radius: 30px;
 color: black;
+padding: 1px 1px;
+border: 1px solid rgb(180, 180, 180);   
+border-radius: 8px;                       
 </string>
          </property>
          <column>
@@ -579,11 +782,14 @@ color: black;
         <widget class="QFrame" name="compat_frame">
          <property name="geometry">
           <rect>
-           <x>630</x>
-           <y>120</y>
-           <width>491</width>
-           <height>431</height>
+           <x>790</x>
+           <y>60</y>
+           <width>411</width>
+           <height>241</height>
           </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"> border-radius: 45px;                     </string>
          </property>
          <property name="frameShape">
           <enum>QFrame::Shape::StyledPanel</enum>
@@ -592,50 +798,70 @@ color: black;
           <enum>QFrame::Shadow::Raised</enum>
          </property>
         </widget>
-        <widget class="QLabel" name="label_4">
+        <widget class="QLabel" name="detailed">
          <property name="geometry">
           <rect>
-           <x>400</x>
-           <y>80</y>
-           <width>201</width>
-           <height>111</height>
+           <x>330</x>
+           <y>90</y>
+           <width>411</width>
+           <height>551</height>
           </rect>
          </property>
          <property name="styleSheet">
-          <string notr="true">color:black;
-background-color:transparent;</string>
-         </property>
-         <property name="text">
-          <string>Selected:</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="viewing_l">
-         <property name="geometry">
-          <rect>
-           <x>40</x>
-           <y>600</y>
-           <width>421</width>
-           <height>61</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <family>Segoe UI</family>
-           <pointsize>28</pointsize>
-           <italic>false</italic>
-           <fontweight>DemiBold</fontweight>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color:black;
-font: 600 28pt &quot;Segoe UI&quot;;
-background-color:transparent;</string>
+          <string notr="true">    background-color: white;
+    color: black;
+    font: 700 13pt &quot;Arial&quot;;
+    border: 1px solid rgb(180, 180, 180); 
+    border-radius: 20px;                      
+    padding: 6px 12px;</string>
          </property>
          <property name="text">
           <string/>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton">
+        <widget class="QPushButton" name="exit_s">
+         <property name="geometry">
+          <rect>
+           <x>1220</x>
+           <y>10</y>
+           <width>41</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Arial</family>
+           <pointsize>12</pointsize>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: transparent;
+    color: black;
+    font: 700 12pt &quot;Arial&quot;;
+    border: transparent;  
+    border-radius: 10px;                      
+    padding: 6px 12px;                      
+}
+
+QPushButton:hover {
+    background-color: rgb(245, 245, 245);
+    border-color: rgb(150, 150, 150);
+}
+
+QPushButton:pressed {
+    background-color: rgb(230, 230, 230);
+    border-color: rgb(120, 120, 120);
+}
+</string>
+         </property>
+         <property name="text">
+          <string>X</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="min_s">
          <property name="geometry">
           <rect>
            <x>1190</x>
@@ -644,26 +870,128 @@ background-color:transparent;</string>
            <height>41</height>
           </rect>
          </property>
-         <property name="text">
-          <string>X</string>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="pushButton_2">
-         <property name="geometry">
-          <rect>
-           <x>1150</x>
-           <y>10</y>
-           <width>41</width>
-           <height>41</height>
-          </rect>
+         <property name="font">
+          <font>
+           <family>Arial</family>
+           <pointsize>12</pointsize>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
          </property>
          <property name="styleSheet">
-          <string notr="true"/>
+          <string notr="true">QPushButton {
+    background-color: transparent;
+    color: black;
+    font: 700 12pt &quot;Arial&quot;;
+    border: transparent;  
+    border-radius: 10px;                      
+    padding: 6px 12px;                      
+}
+
+QPushButton:hover {
+    background-color: rgb(245, 245, 245);
+    border-color: rgb(150, 150, 150);
+}
+
+QPushButton:pressed {
+    background-color: rgb(230, 230, 230);
+    border-color: rgb(120, 120, 120);
+}
+</string>
          </property>
          <property name="text">
           <string>-</string>
          </property>
         </widget>
+        <widget class="QLabel" name="label_2">
+         <property name="geometry">
+          <rect>
+           <x>780</x>
+           <y>50</y>
+           <width>431</width>
+           <height>261</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"> border: 1px solid rgb(180, 180, 180);
+    border-radius: 20px;                </string>
+         </property>
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+        <widget class="QTableWidget" name="top5_table">
+         <property name="geometry">
+          <rect>
+           <x>785</x>
+           <y>331</y>
+           <width>421</width>
+           <height>311</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:black;
+    background-color: white;
+    alternate-background-color: rgb(248, 250, 253);
+    border: 1px solid rgb(180, 180, 180);
+    border-radius: 12px;
+    gridline-color: rgb(220, 220, 220);
+    font: 10pt &quot;Arial&quot;;
+
+
+QHeaderView::section {
+    background-color: rgb(240, 240, 240);
+    color: #0047AB;
+    font-weight: bold;
+    border: none;
+    padding: 6px;
+    border-bottom: 1px solid rgb(200, 200, 200);
+}
+
+QTableWidget::item {
+    border: none;
+    padding: 6px;
+}
+</string>
+         </property>
+         <property name="alternatingRowColors">
+          <bool>true</bool>
+         </property>
+         <attribute name="horizontalHeaderStretchLastSection">
+          <bool>true</bool>
+         </attribute>
+        </widget>
+        <widget class="QLabel" name="detailed_2">
+         <property name="geometry">
+          <rect>
+           <x>320</x>
+           <y>30</y>
+           <width>411</width>
+           <height>71</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">    background-color: transparent;
+    color: black;
+    font: 700 20pt &quot;Arial&quot;;
+
+    padding: 6px 12px;</string>
+         </property>
+         <property name="text">
+          <string>Details:</string>
+         </property>
+        </widget>
+        <zorder>label_2</zorder>
+        <zorder>background1_4</zorder>
+        <zorder>Register_Label_6</zorder>
+        <zorder>statistic</zorder>
+        <zorder>track_list</zorder>
+        <zorder>compat_frame</zorder>
+        <zorder>detailed</zorder>
+        <zorder>exit_s</zorder>
+        <zorder>min_s</zorder>
+        <zorder>top5_table</zorder>
+        <zorder>detailed_2</zorder>
        </widget>
        <widget class="QWidget" name="widget">
         <property name="styleSheet">

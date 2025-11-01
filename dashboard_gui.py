@@ -21,11 +21,9 @@ class DashboardWidget(QWidget):
         uic.loadUi("ui/dashboard.ui", self)
         self.load_data(username)
 
-        # connect sidebar to stacked widget
         self.listWidget.currentRowChanged.connect(self.mainStackWig.setCurrentIndex)
         self.listWidget.setCurrentRow(0)
 
-        # listen for page changes
         self.mainStackWig.currentChanged.connect(self._on_page_changed)
 
     def _on_page_changed(self, index: int):
@@ -33,17 +31,14 @@ class DashboardWidget(QWidget):
         current_page = self.mainStackWig.widget(index)
 
         if current_page is self.statistic:
-            # Create statistic page once (lazy loading)
             if not hasattr(self, "g1"):
                 self._create_statistic_page()
 
-            # Animate progress
             self.g1.setTargetValue(25)
             self.g2.setTargetValue(50)
             self.g3.setTargetValue(75)
             self.g4.setTargetValue(90)
         else:
-            # Reset values when leaving the page
             if hasattr(self, "g1"):
                 for g in (self.g1, self.g2, self.g3, self.g4):
                     g.setTargetValue(0)
