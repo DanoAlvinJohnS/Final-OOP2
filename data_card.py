@@ -31,11 +31,7 @@ class DataCard(QWidget):
         self.wrapper.setObjectName("card_wrapper")
         self.wrapper.setStyleSheet("""
             QFrame#card_wrapper {
-                background: qlineargradient(
-                    x1:0, y1:0, x2:1, y2:1,
-                    stop:0 #ffffff,
-                    stop:1 #c2e9fb
-                );
+                background: white;
                 border-radius: 20px;
                 border: 2px solid rgba(255,255,255,0.12);
             }
@@ -87,7 +83,7 @@ class DataCard(QWidget):
         content_layout.addStretch()
         wrapper_layout.addWidget(content)
 
-        # ---- Overlay button ----
+       
         overlay_btn = QPushButton(self.wrapper)
         overlay_btn.setCursor(Qt.CursorShape.PointingHandCursor)
         overlay_btn.setFlat(True)
@@ -103,12 +99,10 @@ class DataCard(QWidget):
         self._default_pos = None
         self._bg_anim = None
 
-    # ---------- Hover Effects ----------
     def enterEvent(self, event):
         if self._default_pos is None:
             self._default_pos = self.pos()
 
-        # lift card up
         pos_anim = QPropertyAnimation(self, b"pos")
         pos_anim.setDuration(300)
         pos_anim.setEasingCurve(QEasingCurve.Type.OutQuad)
@@ -116,14 +110,10 @@ class DataCard(QWidget):
         pos_anim.setEndValue(self._default_pos - QPoint(0, 8))
         pos_anim.start()
 
-        # background transition
         self.wrapper.setStyleSheet("""
             QFrame#card_wrapper {
-                background: qlineargradient(
-                    x1:0, y1:0, x2:1, y2:1,
-                    stop:0 #ffffff,
-                    stop:1 #a1c4fd
-                );
+                background: white;
+                color: black;
                 border-radius: 20px;
                 border: 2px solid rgba(255,255,255,0.12);
             }
@@ -180,36 +170,52 @@ class RecentDataPopup(QWidget):
         layout.setContentsMargins(25, 25, 25, 25)
         layout.setSpacing(14)
 
-        # === Gradient background ===
         self.setStyleSheet("""
-            background-color: qconicalgradient(
-                cx:1, cy:0, angle:0,
-                stop:0 rgba(140, 144, 255, 255),
-                stop:0.994444 rgba(255, 255, 255, 255)
-            );
             QWidget {
+                background: qconicalgradient(
+                    cx:1, cy:0, angle:0,
+                    stop:0 rgba(140, 144, 255, 255),
+                    stop:0.5 rgba(180, 190, 255, 255),
+                    stop:1 rgba(255, 255, 255, 255)
+                );
                 border-radius: 20px;
-                font: 14pt "Arial";
-                color: black;
+                font-family: "Segoe UI", "Arial";
+                font-size: 14pt;
+                color: #1e1e1e;
             }
+
             QPushButton {
+                background-color: white;
+                color: #222;
+                border: 1px solid rgba(0,0,0,0.1);
                 border-radius: 10px;
-                padding: 6px 14px;
+                padding: 8px 18px;
                 font-size: 12pt;
-                background-color: rgba(255,255,255,0.6);
-                color: black;
-                border: 1px solid rgba(0,0,0,0.15);
+                font-weight: 500;
+                transition: all 200ms ease-in-out;
             }
+
             QPushButton:hover {
-                background-color: rgba(255,255,255,0.85);
+                background-color: rgba(255,255,255,0.9);
+                border: 1px solid rgba(0,0,0,0.2);
+            }
+
+            QPushButton:pressed {
+                background-color: rgba(230,230,230,0.9);
+                transform: scale(0.97);
+            }
+
+            QLabel {
+                color: #111;
+                font-weight: 500;
             }
         """)
 
         # === Labels ===
         name_label = QLabel(f"Name: {data.get('name', 'Unknown')}")
-        name_label.setFont(QFont("Arial", 16, QFont.Weight.Bold))
-
+        
         date_label = QLabel(f"Date Created: {data.get('date', 'N/A')}")
+
         course_label = QLabel(
             f"Specialized Course: {data.get('specialized_course', 'N/A')} "
             f"({data.get('specialized_course_pct', 0)}%)"
@@ -218,7 +224,10 @@ class RecentDataPopup(QWidget):
             f"Specialized Job: {data.get('specialized_job', 'N/A')} "
             f"({data.get('specialized_job_pct', 0)}%)"
         )
-
+        date_label.setFont(QFont("Arial", 13, QFont.Weight.Bold))
+        course_label.setFont(QFont("Arial", 13, QFont.Weight.Bold))
+        job_label.setFont(QFont("Arial", 13, QFont.Weight.Bold))
+        name_label.setFont(QFont("Arial", 13, QFont.Weight.Bold))
         # Add labels
         layout.addWidget(name_label)
         layout.addWidget(date_label)
@@ -253,16 +262,24 @@ class RecentDataPopup(QWidget):
 
 
     def remove_data(self):
-        """Remove the file and refresh dashboard"""
         try:
             file_path = self.data.get("file_path")
             if file_path and os.path.exists(file_path):
                 os.remove(file_path)
                 print(f"[OK] Deleted {file_path}")
                 QMessageBox.information(self, "Removed", "Data file removed successfully.")
+                
+                self.refresh_callback()
+                
+                if self.on_remove:
+                    self.on_remove(self.data)
+                elif self.refresh_callback:
+                    self.refresh_callback()
 
             else:
                 QMessageBox.warning(self, "Error", "File not found.")
         except Exception as e:
             QMessageBox.critical(self, "Error", f"Failed to delete file: {e}")
+        
         self.close()
+

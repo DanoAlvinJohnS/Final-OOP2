@@ -86,7 +86,6 @@ class InputWindow(QDialog):
     def init_ui(self):
         layout = QVBoxLayout()
 
-        # Table
         self.table = QTableView()
         self.model = QStandardItemModel(0, 3)
         self.model.setHorizontalHeaderLabels(["Code", "Name", "Grade"])
@@ -113,21 +112,18 @@ class InputWindow(QDialog):
         self.table.setSelectionBehavior(self.table.SelectionBehavior.SelectRows)
         self.table.setSelectionMode(self.table.SelectionMode.SingleSelection)
 
-        # Grade input with validator
         self.grade_input = QLineEdit()
         self.grade_input.setPlaceholderText("Enter grade 0-100")
         validator = QIntValidator(0, 100)
         self.grade_input.setValidator(validator)
         self.grade_input.textChanged.connect(self.update_selected_row_grade)
 
-        # Buttons
         button_layout = QHBoxLayout()
         self.accept_btn = QPushButton("Accept")
         self.cancel_btn = QPushButton("Cancel")
         button_layout.addWidget(self.accept_btn)
         button_layout.addWidget(self.cancel_btn)
 
-        # Status label
         self.status_label = QLabel("")
         self.status_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -138,7 +134,6 @@ class InputWindow(QDialog):
 
         self.setLayout(layout)
 
-        # Connect
         self.cancel_btn.clicked.connect(self.reject)
         self.accept_btn.clicked.connect(self.accept_action)
 
@@ -196,7 +191,6 @@ class InputWindow(QDialog):
         df_results = predict_all_compatibilities(all_models, student_profile)
         self.file_path = save_results(df_results, self.username)
 
-        # Update status and clear grades
         self.status_label.setText("Accepted!")
         for row in range(self.model.rowCount()):
             self.model.setItem(row, 2, QStandardItem(""))
@@ -212,26 +206,21 @@ def input_window(username):
     """
     global _window_ref
 
-    # Reuse existing QApplication if already running
     app = QApplication.instance()
     own_app = False
     if app is None:
         app = QApplication(sys.argv)
         own_app = True
 
-    # Create and open the intro dialog
     intro = IntroWindow(username)
     _window_ref = intro
 
-    # Run as a blocking dialog (waits until user closes)
     result = intro.exec()
 
-    # If accepted, return file path; else None
     if result == QDialog.DialogCode.Accepted:
         return getattr(intro, "file_path", None)
     else:
         return None
 
-    # If no external app existed, quit it
     if own_app:
         app.quit()

@@ -1,4 +1,4 @@
-from PyQt6.QtWidgets import QApplication
+﻿from PyQt6.QtWidgets import QApplication
 from start_up import CareerExplorer
 import sys
 
@@ -7,4 +7,6 @@ if __name__ == "__main__":
     window = CareerExplorer()
     window.show()  
     sys.exit(app.exec())     
-    
+   
+def leave(self):
+        QApplication.quit()

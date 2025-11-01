@@ -1,16 +1,18 @@
 import re
 import os
 import pandas as pd
+from datetime import datetime
 
+from PyQt6.QtWidgets import QTreeWidgetItem
 from PyQt6.QtWidgets import ( QMainWindow, QWidget, QVBoxLayout, QMessageBox)
 from PyQt6.QtCore import Qt
-from ui_handler.statistic_handler import StatisticHandler
-from ui_handler.animations import switch_widget, shake_window, FancyCircularProgress, PlayfulSplash
+
 from dashboard_gui import login_window, DashboardWidget
+from dashboard_handler import populate_recent_data
 from data_card import RecentDataPopup
 from inputgui import input_window
-from datetime import datetime
-from dashboard_handler import populate_recent_data
+from ui_handler.animations import switch_widget, shake_window, PlayfulSplash
+from ui_handler.statistic_handler import load_all_structure
 
 
 class CareerExplorer(QMainWindow):
@@ -20,31 +22,27 @@ class CareerExplorer(QMainWindow):
         self.resize(1500, 700)
         self.setWindowFlags(Qt.WindowType.FramelessWindowHint)
         self.generated_file_path = None
-        # Main container
+        
         self.container = QWidget(self)
         self.container_layout = QVBoxLayout(self.container)
         self.container_layout.setContentsMargins(0, 0, 0, 0)
 
-        # create widgets once
         self.login_widget = login_window(self, "login")
         self.register_widget = login_window(self, "register")
-        # create dashboard without username for now
+
         self.dashboard_widget = DashboardWidget(self, "")  
 
-        # add to container layout and show only login initially
         self.container_layout.addWidget(self.login_widget)
         self.container_layout.addWidget(self.register_widget)
         self.container_layout.addWidget(self.dashboard_widget)
         self.register_widget.hide()
         self.dashboard_widget.hide()
 
-        # connect signals once
         self.login_widget.login_btn.clicked.connect(self.login)
         self.login_widget.reg_btn.clicked.connect(self.show_register)
         self.register_widget.Sign_in.clicked.connect(self.validate)
         self.register_widget.go_back_btn.clicked.connect(self.show_login)
         
-        # make sure dashboard logout works every time
         try:
             self.dashboard_widget.log_out.clicked.connect(self.show_login)
         except Exception:
@@ -58,6 +56,7 @@ class CareerExplorer(QMainWindow):
 
         self.overlay = PlayfulSplash(self)
         self.overlay.show()
+
 
     def switch_to(self, from_widget, to_widget, direction="left"):
         """
@@ -95,19 +94,24 @@ class CareerExplorer(QMainWindow):
             self.login_widget.hide()
             self.dashboard_widget.hide()
 
+    
     def show_dashboard(self, username):
+        self.current_username = username
+        self.dashboard_widget.username = username
+        self.dashboard_widget.mainStackWig.currentChanged.connect(self.on_page_changed)
+
         if self.login_widget.isVisible():
             self.switch_to(self.login_widget, self.dashboard_widget, direction="up")
         else:
             self.login_widget.hide()
             self.register_widget.hide()
             self.dashboard_widget.show()
-
+        self.dashboard_widget.last_results = {}  
+        load_all_structure(self.dashboard_widget, username)
+        
         if hasattr(self.dashboard_widget, "user_name"):
             self.dashboard_widget.user_name.setText(username)
-            
-        self.stat_handler = StatisticHandler(self.dashboard_widget, username)
-
+        
         try:
             self.dashboard_widget.generate_data.clicked.disconnect()
         except Exception:
@@ -127,8 +131,6 @@ class CareerExplorer(QMainWindow):
             if self.generated_file_path
             else QMessageBox.warning(None, "No Data", "Please generate or input data first.")
         )
-
-
         self.load_recent_data(username)
         
     def input_data(self, username):
@@ -142,16 +144,12 @@ class CareerExplorer(QMainWindow):
             msg.setWindowTitle("Success")
             msg.setText("Accepted!")
             msg.exec()
+
+            self.refresh_recent_data(username)
         else:
             print("[INFO] Input canceled or no file generated.")
 
     def load_recent_data(self, username):
-        """
-        Load up to the 5 most recent prediction result files for a given user.
-        For each file, extract the top specialization and job, then show them
-        as cards in the dashboard.
-        """
-
 
         user_folder = f"sources/results/{username}"
         if not os.path.exists(user_folder):
@@ -215,14 +213,10 @@ class CareerExplorer(QMainWindow):
         else:
             print(f"[INFO] No valid result data to display for {username}.")
 
-
+    
     def clear_recent_data(self):
-        """
-        Clear all loaded recent data cards from the dashboard when user logs out.
-        """
         try:
             if hasattr(self.dashboard_widget, "recent_container"):
-                # Remove all widgets inside the container layout
                 layout = self.dashboard_widget.recent_container.layout()
                 if layout:
                     while layout.count():
@@ -238,29 +232,55 @@ class CareerExplorer(QMainWindow):
 
             
     def onclick(self, recent_data, username):
+        def handle_remove(data):
+            file_path = data.get("file_path")
+            if file_path and os.path.exists(file_path):
+                try:
+                    os.remove(file_path)
+                    print(f"[OK] Removed file: {file_path}")
+                    QMessageBox.information(None, "Removed", "Data file has been deleted.")
+                except Exception as e:
+                    QMessageBox.warning(None, "Error", f"Could not delete file:\n{e}")
+            else:
+                QMessageBox.warning(None, "Not Found", "File not found or already deleted.")    
+
         self.popup = RecentDataPopup(
             recent_data,
             on_view=lambda data, path: self.show_page_create_with_data(path),
-            on_remove=lambda data: print(f"Removed {data['name']}"),
+            on_remove=handle_remove,
             refresh_callback=lambda: self.refresh_recent_data(username)
         )
+
         self.popup.show()
+
+    def on_page_changed(self, index):
+        try:
+            current_page = self.dashboard_widget.mainStackWig.widget(index)
+            page_name = current_page.objectName()
+
+            pages_to_refresh = ["pageHome", "pageCreate", "pageStatistic"]
+
+            if page_name in pages_to_refresh:
+                username = getattr(self, "current_username", None)
+                if username:
+                    print(f"[REFRESH] Switched to {page_name} | reloading recent data for {username}")
+                    self.refresh_recent_data(username)
+                else:
+                    print("[WARNING] No username found | cannot refresh data.")
+        except Exception as e:
+            print(f"[ERROR] on_page_changed failed: {e}")
+
             
     def show_page_create_with_data(self, file_path):
-        """
-        Switch dashboard to pageCreate and load the selected prediction data inside predicting_widget.
-        """
         try:
-
             self.dashboard_widget.mainStackWig.setCurrentWidget(self.dashboard_widget.pageCreate)
             print(f"[OK] Switched to pageCreate for file: {file_path}")
  
             page = self.dashboard_widget.pageCreate
 
-            from PyQt6.QtWidgets import QWidget, QVBoxLayout
             predicting_container = page.findChild(QWidget, "predicting_widget")
             if predicting_container is None:
-                raise AttributeError("predicting_widget not found in pageCreate")
+                raise AttributeError("[ERROR on UI] | predicting_widget not found in pageCreate")
 
             if hasattr(page, "predicting_widget_instance") and page.predicting_widget_instance is not None:
                 print("[INFO] Reusing existing PredictingWidget instance.")
@@ -288,12 +308,11 @@ class CareerExplorer(QMainWindow):
         except Exception as e:
             print(f"[ERROR] Failed to load data in pageCreate.predicting_widget: {e}")
 
-
-
     def refresh_recent_data(self, username):
         self.clear_recent_data()
         self.load_recent_data(username)
-
+        load_all_structure(self.dashboard_widget, username)
+       
 
     def login(self):
         from data_handler import get_all_users, binary_search_user

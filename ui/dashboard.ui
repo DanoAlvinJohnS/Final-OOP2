@@ -72,8 +72,8 @@ font: 28pt &quot;Calibri&quot;;</string>
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">QLabel:user_name { background-color: transparent; }
-</string>
+        <string notr="true">QLabel { background-color: transparent; }
+QPushButton {color: black}</string>
        </property>
        <property name="currentIndex">
         <number>2</number>
@@ -533,78 +533,135 @@ color: qconicalgradient(cx:1, cy:0.04, angle:272, stop:0 rgba(255, 255, 255, 255
           <string>Statistics</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="btnViewSelected">
+        <widget class="QLabel" name="holder">
          <property name="geometry">
           <rect>
-           <x>30</x>
-           <y>590</y>
-           <width>171</width>
-           <height>41</height>
+           <x>400</x>
+           <y>20</y>
+           <width>331</width>
+           <height>61</height>
           </rect>
          </property>
-         <property name="font">
-          <font>
-           <family>Segoe UI</family>
-           <pointsize>20</pointsize>
-           <italic>false</italic>
-           <fontweight>DemiBold</fontweight>
-          </font>
-         </property>
          <property name="styleSheet">
-          <string notr="true">
-border-top-left-radius: 20px;
-border-bottom-left-radius: 20px;
-border-bottom-right-radius: 20px;
-border-top-right-radius: 20px;
-font: 600 20pt &quot;Segoe UI&quot;;
-color:black;
-background-color:qconicalgradient(cx:1, cy:0, angle:0, stop:0 rgba(140, 144, 255, 255), stop:0.994444 rgba(255, 255, 255, 255))</string>
+          <string notr="true">color:black;
+font: 600 28pt &quot;Segoe UI&quot;;
+background-color:transparent;</string>
          </property>
          <property name="text">
-          <string/>
+          <string> Description</string>
          </property>
         </widget>
-        <widget class="QWidget" name="progressCircular" native="true">
-         <property name="geometry">
-          <rect>
-           <x>810</x>
-           <y>230</y>
-           <width>301</width>
-           <height>281</height>
-          </rect>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_3">
+        <widget class="QTreeWidget" name="track_list">
          <property name="geometry">
           <rect>
            <x>30</x>
-           <y>550</y>
-           <width>171</width>
-           <height>16</height>
+           <y>160</y>
+           <width>301</width>
+           <height>431</height>
           </rect>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color:black</string>
+          <string notr="true">background-color: qconicalgradient(cx:0, cy:1, angle:106.7, stop:0 rgba(99, 216, 255, 255), stop:1 rgba(255, 255, 255, 255));
+font: 700 20pt &quot;Arial&quot;;
+border-top-left-radius: 30px;
+border-top-right-radius: 30px;
+border-bottom-left-radius: 30px;
+border-bottom-right-radius: 30px;
+color: black;
+</string>
+         </property>
+         <column>
+          <property name="text">
+           <string>List of recents</string>
+          </property>
+         </column>
+        </widget>
+        <widget class="QFrame" name="compat_frame">
+         <property name="geometry">
+          <rect>
+           <x>630</x>
+           <y>120</y>
+           <width>491</width>
+           <height>431</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Shape::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Shadow::Raised</enum>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_4">
+         <property name="geometry">
+          <rect>
+           <x>400</x>
+           <y>80</y>
+           <width>201</width>
+           <height>111</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:black;
+background-color:transparent;</string>
          </property>
          <property name="text">
           <string>Selected:</string>
          </property>
         </widget>
-        <widget class="QListWidget" name="listFiles">
+        <widget class="QLabel" name="viewing_l">
          <property name="geometry">
           <rect>
-           <x>30</x>
-           <y>300</y>
-           <width>171</width>
-           <height>251</height>
+           <x>40</x>
+           <y>600</y>
+           <width>421</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+           <pointsize>28</pointsize>
+           <italic>false</italic>
+           <fontweight>DemiBold</fontweight>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:black;
+font: 600 28pt &quot;Segoe UI&quot;;
+background-color:transparent;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton">
+         <property name="geometry">
+          <rect>
+           <x>1190</x>
+           <y>10</y>
+           <width>41</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>X</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_2">
+         <property name="geometry">
+          <rect>
+           <x>1150</x>
+           <y>10</y>
+           <width>41</width>
+           <height>41</height>
           </rect>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: qconicalgradient(cx:0, cy:1, angle:106.7, stop:0 rgba(99, 216, 255, 255), stop:1 rgba(255, 255, 255, 255));
-border-top-left-radius: 30px;
-border-top-right-radius: 30px;
-border-bottom-left-radius: 30px;
-border-bottom-right-radius: 30px;</string>
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>-</string>
          </property>
         </widget>
        </widget>
