@@ -47,7 +47,9 @@ class CareerExplorer(QMainWindow):
         bind_global_shortcuts(self.dashboard_widget)
         bind_global_shortcuts(self.login_widget)
         bind_global_shortcuts(self.register_widget)
-        
+
+        self.dashboard_widget.go_create.clicked.connect(self.go_create)
+        self.dashboard_widget.go_statistic.clicked.connect(self.go_stat)
         self.dashboard_widget.exit_h.clicked.connect(kill_everything)
         self.dashboard_widget.min_h.clicked.connect(minimize_all)
         self.dashboard_widget.exit_r.clicked.connect(kill_everything)
@@ -74,6 +76,12 @@ class CareerExplorer(QMainWindow):
         
         self.overlay = PlayfulSplash(self)
         self.overlay.show()
+        
+    def go_stat(self):
+        self.dashboard_widget.mainStackWig.setCurrentWidget(self.dashboard_widget.pageStatistic)
+
+    def go_create(self):
+       self.dashboard_widget.mainStackWig.setCurrentWidget(self.dashboard_widget.pageCreate)
 
 
     def switch_to(self, from_widget, to_widget, direction="left"):
